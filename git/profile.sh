@@ -72,7 +72,7 @@ printf "Preparing to manage you Git profiles.\n"
 
 if [ 'telus' = "${PROFILE}" ]; then
   printf "Using the 'Telus Digital' Git profile.\n"
-  git config user.name "=Yusuf Fadairo"
+  git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.fadairo@telus.com"
 
 elif [ 'kami' = "${PROFILE}" ]; then
