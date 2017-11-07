@@ -1,6 +1,10 @@
 #!/bin/sh
 ## Git Profile Manager
 # Given a Git profile (GitHub, Bitbucket, etc.) it sets the git config parameters appropriately
+
+BASE_DIR=$(dirname $_)
+
+# Exit the script whenever there is an error
 set -e
 
 # Define usage function
@@ -14,11 +18,6 @@ function usage {
   exit 1
 }
 
-# Alias file in ~/.bashrc
-BASHRC='~/.bashrc'
-touch $BASHRC
-echo "alias gpf $(pwd)/profile.sh" > $BASHRC
-source $BASHRC
 
 # Invoke Usage function
 [ -z $1 ] && { usage; }
