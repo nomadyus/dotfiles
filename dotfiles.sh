@@ -7,6 +7,10 @@ HOME_DIR=~
 BASH_DIR="${DIR}/bash"
 ALIASES="aliases.sh"
 ENVIRONMENT="env.sh"
+DOTFILES="dotfiles.sh"
+
+## Export this dotfiles to evironment variables
+export DOTFILES="${DIR}/${DOTFILES}"
 
 printf "\nPreparing the bash environment using the dotfiles.\n"
 
