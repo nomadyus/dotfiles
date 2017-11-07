@@ -7,7 +7,6 @@ HOME_DIR=~
 BASH_DIR="${DIR}/bash"
 ALIASES="aliases.sh"
 ENVIRONMENT="env.sh"
-BASH_PROFILE=".bash_profile"
 
 printf "\nPreparing the bash environment using the dotfiles.\n"
 
