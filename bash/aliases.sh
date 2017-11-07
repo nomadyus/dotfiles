@@ -24,6 +24,7 @@ alias gcm="echo 'Running: git commit -m'; git commit -m "
 alias gca="echo 'Running: git commit --amend'; git commit --amend "
 alias gco="echo 'Running: git commit '; git commit "
 alias gc.="echo 'Running: git checkout .'; git checkout ."
+alias gck="echo 'Running: git checkout'; git checkout "
 alias gdf="echo 'Running: git diff'; git diff "
 alias glo="echo 'Running: git log'; git log "
 
