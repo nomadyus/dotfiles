@@ -18,7 +18,6 @@ function usage {
   exit 1
 }
 
-
 # Invoke Usage function
 [ -z $1 ] && { usage; }
 
