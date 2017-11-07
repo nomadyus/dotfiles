@@ -10,7 +10,7 @@ alias ...="echo 'Running: cd ../..'; cd ../..; pwd"
 alias ....="echo 'Running: cd ../../..'; cd ../../..; pwd"
 alias .....="echo 'Running: cd ../../../..'; cd ../../../..; pwd"
 alias ~="echo 'Running: cd ~'; cd ~; pwd"
-alias c="echo 'Running: cd ~'; cd ~; pwd"
+alias c="echo 'Running: cd'; cd "
 alias -- -="echo 'Running cd -'; cd -"
 
 ## Git
