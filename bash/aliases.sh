@@ -14,13 +14,17 @@ alias c="echo 'Running: cd ~'; cd ~; pwd"
 alias -- -="echo 'Running cd -'; cd -"
 
 ## Git
-alias gst="echo 'Running: git status'; git status"
+alias gst="echo 'Running: git status'; git status "
 alias gpr="echo 'Running: git pull --rebase'; git pull --rebase"
+alias gpl="echo 'Running: git pull'; git pull "
+alias gps="echo 'Running: git push'; git push "
+alias gad="echo 'Running: git add .'; git add "
 alias ga.="echo 'Running: git add .'; git add ."
-alias gcm="echo 'Running: git commit -m'; git commit -m"
+alias gcm="echo 'Running: git commit -m'; git commit -m "
+alias gca="echo 'Running: git commit --amend'; git commit --amend "
+alias gco="echo 'Running: git commit '; git commit "
 alias gc.="echo 'Running: git checkout .'; git checkout ."
 alias gdf="echo 'Running: git diff'; git diff"
-alias gpf="echo 'Running: ../git/profile.sh';  ../git/profile.sh"
 
 ## Development
 alias src="echo src='Sourcing ~/.bash_profile'; source ~/.bash_profile" 

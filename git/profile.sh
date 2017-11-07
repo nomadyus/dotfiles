@@ -14,6 +14,12 @@ function usage {
   exit 1
 }
 
+# Alias file in ~/.bashrc
+BASHRC='~/.bashrc'
+touch $BASHRC
+echo "alias gpf $(pwd)/profile.sh" > $BASHRC
+source $BASHRC
+
 # Invoke Usage function
 [ -z $1 ] && { usage; }
 
