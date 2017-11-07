@@ -1,6 +1,5 @@
 #!/bin/sh
 ## Dotfiles setup script
-set -e
 
 DIR=$(pwd)
 HOME_DIR=~
