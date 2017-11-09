@@ -19,6 +19,11 @@ export DOTFILES_DIR=~/Development/kami/dotfiles
 alias dotfiles="DIR=$(pwd); cd $DOTFILES_DIR; source ./dotfiles.sh; cd $DIR"
 ```
 In order to reload the dotfile you can simply source the file using the path in the environment variable with the command `dotfiles`.
+Setting the `DOTFILES_DIR` environment variable also lets you set up an alias for the [Git Profile Manager](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh) by adding the following line to your `~/bash_profile`
+```
+alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
+
+```
 
 
 ## Included
