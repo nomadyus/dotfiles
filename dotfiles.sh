@@ -2,7 +2,6 @@
 ## Dotfiles setup script
 
 DIR=$PWD
-echo "DIR: $DIR"
 HOME_DIR=~
 BASH_DIR="${DIR}/bash"
 ALIASES="aliases.sh"
