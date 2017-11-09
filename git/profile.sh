@@ -18,6 +18,8 @@ function usage {
   exit 1
 }
 
+export GIT_PROFILE="$BASE_DIR/profile.sh"
+
 # Invoke Usage function
 [ -z $1 ] && { usage; }
 

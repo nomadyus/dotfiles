@@ -1,7 +1,8 @@
 #!/bin/sh
 ## Dotfiles setup script
 
-DIR=$(dirname $_) # Gets the path to the file if if was sourced or called directly"
+DIR=$PWD
+echo "DIR: $DIR"
 HOME_DIR=~
 BASH_DIR="${DIR}/bash"
 ALIASES="aliases.sh"
