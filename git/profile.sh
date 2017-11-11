@@ -76,15 +76,21 @@ checkForInputParameters
 
 printf "Preparing to manage you Git profiles.\n"
 
+REMOTE_ORIGIN=$(git config remote.origin.url)
+
 if [ 'telus' = "${PROFILE}" ]; then
   printf "Using the 'Telus Digital' Git profile.\n"
   git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.fadairo@telus.com"
+  REMOTE_ORIGIN=${REMOTE_ORIGIN/@github./@telus.github.}
+  printf "\nRemote Origin ${REMOTE_ORIGIN}\n"
+
 
 elif [ 'kami' = "${PROFILE}" ]; then
   printf "Using the 'Yusuf Fadairo' Git profile.\n"
   git config user.name "Yusuf Fadairo"
-  git config user.email "yusuf.kami@gmail.com"
+  git config user.email "yusuf.kami@gmail.com"  
+  REMOTE_ORIGIN=${REMOTE_ORIGIN/@telus.github./@github.}
 
 elif [ 'bb' = "${PROFILE}" ]; then
   printf "Using the 'Yusuf Kami' Bitbucket profile.\n"
@@ -95,6 +101,8 @@ else
   printf "Profile name not recognised.\n"
   exit 1
 fi
+
+git config remote.origin.url $REMOTE_ORIGIN
 
 printf "Your Git profile has been set.\n"
 
