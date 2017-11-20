@@ -36,6 +36,8 @@ alias gl1="echo 'Running: git log -n1'; git log -n1"
 alias gl2="echo 'Running: git log -n2'; git log -n2"
 alias gl3="echo 'Running: git log -n3'; git log -n3"
 alias glg="echo 'Running: git log --grep'; git log --grep "
+alias gcg="echo 'Running:  git config --local --list'; git config --list"
+alias gcl="echo 'Running:  git config --local --list'; git config --local --list"
 
 ## Development
 alias src="echo src='Sourcing ~/.bash_profile'; source ~/.bash_profile" 
