@@ -18,6 +18,10 @@ alias -- -="echo 'Running cd -'; cd -"
 
 ## Git
 alias gst="echo 'Running: git status'; git status "
+alias gsl="echo 'Running: git stash list'; git stash list"
+alias gss="echo 'Running: git stash save'; git stash save "
+alias gsa="echo 'Running: git stash apply'; git stash apply "
+alias gsp="echo 'Running: git stash pop'; git stash pop "
 alias gpr="echo 'Running: git pull --rebase'; git pull --rebase"
 alias gpl="echo 'Running: git pull'; git pull "
 alias gps="echo 'Running: git push'; git push "
@@ -39,6 +43,10 @@ alias gl4="echo 'Running: git log -n4'; git log -n4"
 alias glg="echo 'Running: git log --grep'; git log --grep "
 alias gcg="echo 'Running:  git config --local --list'; git config --list"
 alias gcl="echo 'Running:  git config --local --list'; git config --local --list"
+alias gtg="echo 'Running: git tag'; git tag"
+alias gta="echo 'Running: git tag -a'; git tag -a "
+alias gpt="echo 'Running: git push --tags'; git push --tags"
+
 
 ## Development
 alias src="echo src='Sourcing ~/.bash_profile'; source ~/.bash_profile" 
