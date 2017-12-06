@@ -1,5 +1,9 @@
 #!/bin/sh
 ## Setup for bash aliases
+## Complex functions
+function printAllHistory() {
+  for history in `echo ~/.bash_sessions/*`; do echo "Printing history in '$history' file"; while read -r line; do echo "$line"; done  < $history; done;
+}
 
 ##  Navigation
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
@@ -46,7 +50,8 @@ alias gcl="echo 'Running:  git config --local --list'; git config --local --list
 alias gtg="echo 'Running: git tag'; git tag"
 alias gta="echo 'Running: git tag -a'; git tag -a "
 alias gpt="echo 'Running: git push --tags'; git push --tags"
-
+alias gbr="echo 'Running: git branch '; git branch "
+alias gbd="echo 'Running: git branch -d'; git branch -d "
 
 ## Development
 alias src="echo src='Sourcing ~/.bash_profile'; source ~/.bash_profile" 
@@ -58,3 +63,4 @@ alias -- +x="echo 'Making executable'; chmod +x "
 alias ax="echo 'Making executable for all'; chmod a+x "
 alias a+x="echo 'Making executable for all'; chmod a+x "
 alias cl="echo 'Clearing Screen'; clear; clear;"
+alias his="echo 'Printing all history sessions'; printAllHistory"
