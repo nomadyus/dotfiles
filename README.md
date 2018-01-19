@@ -5,7 +5,7 @@ A collection of scripts and code snippets used for most of my development.
 $ git clone https://github.com/yusuf-kami/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles
 $ chmod +x dotfiles.sh
-$ source ./dotfiles.sh 
+$ source ./dotfiles.sh
 
 ## Setup
 Setting up the dotfiles is as easy as `source ./dotfiles.sh ` in any bash environment. 
