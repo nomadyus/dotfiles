@@ -8,7 +8,7 @@ $ chmod +x dotfiles.sh
 $ source ./dotfiles.sh
 
 ## Setup
-Setting up the dotfiles is as easy as `source ./dotfiles.sh ` in any bash environment. 
+Setting up the dotfiles is as easy as `source ./dotfiles.sh ` in any bash environment.
 
 ## Reloading
 Add the path of the directory to `/.dotfiles.sh` file to your `~/bash_profile` using the environment variables `DOTFILES_DIR` like below:
