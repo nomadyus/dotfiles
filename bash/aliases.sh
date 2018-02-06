@@ -66,3 +66,12 @@ alias ax="echo 'Making executable for all'; chmod a+x "
 alias a+x="echo 'Making executable for all'; chmod a+x "
 alias cl="echo 'Clearing Screen'; clear; clear;"
 alias his="echo 'Printing all history sessions'; printAllHistory"
+
+## Docker
+alias dic="echo 'Running: docker rmi $(docker images -aq)'; docker rmi $(docker images -aq)"
+alias dpc="echo 'Running: docker rm $(docker ps -aq)'; docker rm $(docker ps -aq)"
+
+## Magic
+alias ps="echo 'Running: ps aux'; ps aux"
+alias psg="echo 'Running: ps aux | grep '; ps aux | grep "
+alias pan="echo 'Get port of PID. Running lsof -Pan -p PID -i'; lsof -Pan -p PID -i "
