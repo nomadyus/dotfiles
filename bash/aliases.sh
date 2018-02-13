@@ -76,6 +76,6 @@ alias dic="echo 'Running: docker rmi $(docker images -aq)'; docker rmi $(docker 
 alias dpc="echo 'Running: docker rm $(docker ps -aq)'; docker rm $(docker ps -aq)"
 
 ## Magic
-alias ps="echo 'Running: ps aux'; ps aux"
-alias psg="echo 'Running: ps aux | grep '; ps aux | grep "
+alias psa="echo 'Running: ps aux'; ps aux"
+alias psg="echo 'Running: ps -aux | grep '; ps -aux | grep "
 alias pan="echo 'Get port of PID. Running lsof -Pan -p PID -i'; lsof -Pan -p PID -i "
