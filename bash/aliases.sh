@@ -68,6 +68,10 @@ alias cl="echo 'Clearing Screen'; clear; clear;"
 alias his="echo 'Printing all history sessions'; printAllHistory"
 
 ## Docker
+alias dim="echo 'Running: docker images'; docker images"
+alias dia="echo 'Running: docker images'; docker images -a"
+alias dps="echo 'Running: docker ps'; docker ps"
+alias dpa="echo 'Running: docker ps'; docker ps -a"
 alias dic="echo 'Running: docker rmi $(docker images -aq)'; docker rmi $(docker images -aq)"
 alias dpc="echo 'Running: docker rm $(docker ps -aq)'; docker rm $(docker ps -aq)"
 
