@@ -73,8 +73,8 @@ alias dim="echo 'Running: docker images'; docker images"
 alias dia="echo 'Running: docker images'; docker images -a"
 alias dps="echo 'Running: docker ps'; docker ps"
 alias dpa="echo 'Running: docker ps'; docker ps -a"
-alias dic="echo 'Running: docker rmi $(docker images -aq)'; docker rmi $(docker images -aq)"
-alias dpc="echo 'Running: docker rm $(docker ps -aq)'; docker rm $(docker ps -aq)"
+alias dri="echo 'Running: docker rmi'; docker rmi "
+alias drp="echo 'Running: docker rm'; docker rm "
 
 ## Magic
 alias psa="echo 'Running: ps aux'; ps aux"
