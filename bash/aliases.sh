@@ -56,8 +56,8 @@ alias gbd="echo 'Running: git branch -d'; git branch -d "
 alias gmv="echo 'Running: git mv'; git mv "
 
 ## Development
-alias mkd= "echo 'Making new directory'; mkdir "
-alias src="echo src='Sourcing ~/.bash_profile'; source ~/.bash_profile"
+alias mkd="echo 'Making new directory'; mkdir "
+alias src="echo 'Sourcing ~/.bash_profile'; source ~/.bash_profile"
 alias hey="echo 'Read ~/.bash_profile'; cat ~/.bash_profile"
 alias vib="echo 'Edit ~/.bash_profile' ; vi ~/.bash_profile"
 alias x="echo 'Making executable'; chmod +x "
