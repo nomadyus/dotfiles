@@ -53,6 +53,7 @@ alias gpt="echo 'Running: git push --tags'; git push --tags"
 alias gbr="echo 'Running: git branch '; git branch "
 alias gbd="echo 'Running: git branch -d'; git branch -d "
 alias gmv="echo 'Running: git mv'; git mv "
+alias grl="echo 'Running: git reflow'; git reflog "
 
 ## Development
 alias mkd="echo 'Making new directory'; mkdir "
