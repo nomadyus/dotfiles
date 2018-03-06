@@ -9,7 +9,6 @@ function printAllHistory() {
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
 alias dev="echo 'Opening ~/Development'; cd ~/Development; pwd"
 alias lsa="echo 'Listing content in directory'; ls -la"
-alias .="echo 'Running: pwd'; pwd"
 alias ..="echo 'Running: cd ..'; cd ..; pwd"
 alias ...="echo 'Running: cd ../..'; cd ../..; pwd"
 alias ....="echo 'Running: cd ../../..'; cd ../../..; pwd"
