@@ -37,19 +37,19 @@ PROFILE=${1:-}
 function checkForGitDependency() {
   printf "Checking that you have Git installed.\n"
   if ! which git &> /dev/null
-    then 
+    then
       printf "I need Git installed to proceed!\n"
       exit 1
   fi
   printf "You got Git. Nice!\n"
-} 
+}
 
 function checkForGitRepository() {
   printf "Checking that the repository is Git compatible.\n"
 
   if [ -d .git ]; then
     printf "This location is a Git repository.\n"
-  else 
+  else
     printf "This is a NOT a Git repository.\n"
     exit 1
   fi
@@ -57,7 +57,7 @@ function checkForGitRepository() {
 
 function checkForInputParameters() {
   printf "Checking which profile to run.\n"
-  if [ -z "${PROFILE}" ]; then 
+  if [ -z "${PROFILE}" ]; then
     printf "No Git profile provided!\n"
     exit 1
   fi
@@ -89,7 +89,7 @@ if [ 'telus' = "${PROFILE}" ]; then
 elif [ 'kami' = "${PROFILE}" ]; then
   printf "Using the 'Yusuf Fadairo' Git profile.\n"
   git config user.name "Yusuf Fadairo"
-  git config user.email "yusuf.kami@gmail.com"  
+  git config user.email "yusuf.kami@gmail.com"
   REMOTE_ORIGIN=${REMOTE_ORIGIN/@telus.github./@github.}
 
 elif [ 'bb' = "${PROFILE}" ]; then
@@ -97,7 +97,7 @@ elif [ 'bb' = "${PROFILE}" ]; then
   git config user.name "Yusuf Kami"
   git config user.email "yusuf.kami@gmail.com"
 
-else 
+else
   printf "Profile name not recognised.\n"
   exit 1
 fi

@@ -1,11 +1,13 @@
 #!/bin/sh
 ## Setup for bash aliases
+
 ## Complex functions
 function printAllHistory() {
-  for history in `echo ~/.bash_sessions/*`; do echo "Printing history in '$history' file"; while read -r line; do echo "$line"; done  < $history; done;
+  for history in `echo ~/.bash_sessions/*`; do echo "Printing history in '$history' file"; while read -r line; do echo "$line"; done < $history; done;
 }
 
 ##  Navigation
+alias b="echo 'Running: cd ~/Documents'; cd ~/Documents; pwd"
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
 alias dev="echo 'Opening ~/Development'; cd ~/Development; pwd"
 alias lsa="echo 'Listing content in directory'; ls -la"
