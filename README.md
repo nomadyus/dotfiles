@@ -2,10 +2,13 @@
 A collection of scripts and code snippets used for most of my development.
 
 ## Installation
-$ git clone https://github.com/yusuf-kami/dotfiles.git ~/dotfiles
-$ cd ~/dotfiles
-$ chmod +x dotfiles.sh
-$ source ./dotfiles.sh
+In order to install the `dotfiles` CLI use the following commands:
+```
+ git clone https://github.com/yusuf-kami/dotfiles.git ~/dotfiles
+ cd ~/dotfiles
+ chmod +x dotfiles.sh
+ source ./dotfiles.sh
+```
 
 ## Setup
 Setting up the dotfiles is as easy as `source ./dotfiles.sh ` in any bash environment.
@@ -37,4 +40,4 @@ The repository includes the following configuration and tools:
 ### Git
 #### [Git Profile Manager](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh)
 The git profile manager sets the user name and email used to interface with GitHub or Bitbucket. It also sets the Hostname used to connect to GitHub for profiles that have more than one user accounts for the same provider.
-
+The manager is run using the `gpf` command in the console.
