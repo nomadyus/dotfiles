@@ -58,6 +58,8 @@ alias gbr="echo 'Running: git branch '; git branch "
 alias gbd="echo 'Running: git branch -d'; git branch -d "
 alias gmv="echo 'Running: git mv'; git mv "
 alias grl="echo 'Running: git reflog'; git reflog "
+alias grt="echo 'Running git reset '; git reset "
+alias grh="echo 'Running: git reset HEAD --hard'; git reset HEAD --hard"
 
 ## Development
 alias mkd="echo 'Making new directory'; mkdir "
@@ -72,6 +74,7 @@ alias a+x="echo 'Making executable for all'; chmod a+x "
 alias cl="echo 'Clearing Screen'; clear; clear;"
 alias his="echo 'Printing all history sessions'; printAllHistory"
 alias s="echo 'Running: source'; source "
+alias v="echo 'Running: vi'; vi "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
