@@ -71,6 +71,7 @@ alias ax="echo 'Making executable for all'; chmod a+x "
 alias a+x="echo 'Making executable for all'; chmod a+x "
 alias cl="echo 'Clearing Screen'; clear; clear;"
 alias his="echo 'Printing all history sessions'; printAllHistory"
+alias s="echo 'Running: source'; source "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
