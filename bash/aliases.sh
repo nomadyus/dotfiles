@@ -58,7 +58,7 @@ alias gbr="echo 'Running: git branch '; git branch "
 alias gbd="echo 'Running: git branch -d'; git branch -d "
 alias gmv="echo 'Running: git mv'; git mv "
 alias grl="echo 'Running: git reflog'; git reflog "
-alias grt="echo 'Running git reset '; git reset "
+alias grt="echo 'Running: git reset '; git reset "
 alias grh="echo 'Running: git reset HEAD --hard'; git reset HEAD --hard"
 
 ## Development
