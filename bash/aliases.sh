@@ -79,6 +79,7 @@ alias cl="echo 'Clearing Screen'; clear; clear;"
 alias his="echo 'Printing all history sessions'; printAllHistory"
 alias s="echo 'Running: source'; source "
 alias v="echo 'Running: vi'; vi "
+alias r="echo 'Running: cat'; cat "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
