@@ -93,6 +93,7 @@ alias dcp="echo 'Running: docker-compose'; docker-compose "
 alias dbd="echo 'Running: docker build '; docker build "
 alias db.="echo 'Running: docker build .'; docker build ."
 alias drn="echo 'Running: docker run'; docker run "
+alias dkl="echo 'Running: docker kill'; docker kill "
 
 ## Magic
 alias psa="echo 'Running: ps aux'; ps aux"
