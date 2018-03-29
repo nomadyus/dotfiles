@@ -46,7 +46,7 @@ A theme for the bash console I really like called [Dracula](https://draculatheme
 - For **iTerm2** you will have to import the [color presets](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.terminal) from `./bin/Dracula.terminal`into the a new profile and apply it to the console.
 
 These profiles can always be adjusted to your preferences once they are downloaded. The current look of the *Dracula* theme on Terminal is as follows:
-![Dracula theme in Terminal](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula..png)
+![Dracula theme in Terminal](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.png)
 
 
 ### Git
