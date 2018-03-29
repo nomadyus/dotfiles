@@ -35,10 +35,10 @@ alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
 ## Included
 The repository includes the following configuration and tools:
 ### Bash
-#### [Aliases](https://github.com/yusuf-kami/dotfiles/blob/master/bash/aliases.sh)
-This file contains all the aliases for the most frequently used commands.
+#### Aliases
+This [`/bash/aliases.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/aliases.sh) contains all the aliases for the most frequently used commands.
 #### Profile
-A bash **[profile script](https://github.com/yusuf-kami/dotfiles/blob/master/bash/profile.sh)** is also included to setup the profile and display preference for the terminal.
+A bash **[`/bash/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/profile.sh)** is also included to setup the profile and display preference for the terminal.
 
 #### Theme
 A theme for the bash console I really like called [Dracula](https://draculatheme.com/) is also included.
