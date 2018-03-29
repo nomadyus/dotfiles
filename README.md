@@ -36,9 +36,9 @@ alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
 The repository includes the following configuration and tools:
 ### Bash
 #### Aliases
-This [`/bash/aliases.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/aliases.sh) contains all the aliases for the most frequently used commands.
+This **[`/bash/aliases.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/aliases.sh)** bash script contains all the aliases for the most frequently used commands and sets them for the console.
 #### Profile
-A bash **[`/bash/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/profile.sh)** is also included to setup the profile and display preference for the terminal.
+The bash profile script at **[`/bash/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/profile.sh)** is also included to setup the profile and display preference for the terminal.
 
 #### Theme
 A theme for the bash console I really like called [Dracula](https://draculatheme.com/) is also included.
@@ -50,6 +50,6 @@ These profiles can always be adjusted to your preferences once they are download
 
 
 ### Git
-#### [Git Profile Manager](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh)
-The git profile manager sets the user name and email used to interface with GitHub or Bitbucket. It also sets the Hostname used to connect to GitHub for profiles that have more than one user accounts for the same provider.
+#### Git Profile Manager
+The Git Profie Manager at **[`/git/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh)** sets the user name and email used to interface with GitHub or Bitbucket. It also sets the Hostname used to connect to GitHub for profiles that have more than one user accounts for the same provider.
 The manager is run using the `gpf` command in the console.
