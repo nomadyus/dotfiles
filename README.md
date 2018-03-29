@@ -18,7 +18,7 @@ Add the path of the directory to `./dotfiles.sh` file to your `~/.bash_profile` 
 ```
 #~/.bash_profile
 echo "Storing the dotfiles path to ~/.bash_profile"
-export DOTFILES_DIR=[PATH TO DOTFILES DIR]
+export DOTFILES_DIR=[PATH_TO_DOTFILES_DIR]
 alias dotfiles="pushd $(pwd); cd $DOTFILES_DIR; source ./dotfiles.sh; popd"
 
 echo "Loading dotfiles"
@@ -36,6 +36,18 @@ alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
 The repository includes the following configuration and tools:
 ### Bash
 #### [Aliases](https://github.com/yusuf-kami/dotfiles/blob/master/bash/aliases.sh)
+This file contains all the aliases for the most frequently used commands.
+#### Profile
+A bash profile **[profile script](https://github.com/yusuf-kami/dotfiles/blob/master/bash/profile.sh)** is also included to c
+
+#### Theme
+A theme for the bash console I really like called [Dracula](https://draculatheme.com/) is also included.
+- You can set up the terminal theme importing the [profile](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.terminal) from `./bin/Dracula.terminal` into the **Terminal**.
+- For **iTerm2** you will have to import the [color presets](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.terminal) from `./bin/Dracula.terminal`into the a new profile and apply it to the console.
+
+These profiles can always be adjusted to your preferences once they are downloaded. The current look of the *Dracula* theme on Terminal is as follows:
+![Dracula theme in Terminal](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula..png)
+
 
 ### Git
 #### [Git Profile Manager](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh)
