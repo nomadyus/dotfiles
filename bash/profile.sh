@@ -11,8 +11,8 @@ case $(id -u) in
 esac
 
 # Symbols
-prompt_symbol="-❯"
-prompt_clean_symbol="☀ "
+prompt_symbol="-❥"
+prompt_clean_symbol="✿ "
 prompt_dirty_symbol="☂ "
 prompt_venv_symbol="☁ "
 
