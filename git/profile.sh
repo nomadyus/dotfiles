@@ -30,10 +30,6 @@ printf "\nRunning Git Profile Manager.\n"
 # 1. Profile name [telus, kami, bb]
 PROFILE=${1:-}
 
-# When i tell you to use a profile for git 
-# You should so do and use the same profile until I ask for it to be changed
-# Do this by setting the user.name and user.email in git config
-
 function checkForGitDependency() {
   printf "Checking that you have Git installed.\n"
   if ! which git &> /dev/null
@@ -64,8 +60,7 @@ function checkForInputParameters() {
   printf "Working with Git profile '${PROFILE}'.\n"
 }
 
-# invoke usage
-# call usage() function if filename not supplied
+# Invoke usage function: call usage() function if profile name not supplied
 [[ $# -eq 0 ]] && usage
 
 checkForGitDependency
