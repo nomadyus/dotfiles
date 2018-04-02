@@ -83,6 +83,8 @@ alias his="echo 'Printing all history sessions'; printAllHistory"
 alias s="echo 'Running: source'; source "
 alias v="echo 'Running: vi'; vi "
 alias r="echo 'Running: cat'; cat "
+alias t="echo 'Running: tail'; tail "
+alias taf="echo 'Running: tail -f'; tail -f "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
