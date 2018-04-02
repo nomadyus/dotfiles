@@ -63,6 +63,7 @@ alias grl="echo 'Running: git reflog'; git reflog "
 alias grt="echo 'Running: git reset '; git reset "
 alias grh="echo 'Running: git reset HEAD --hard'; git reset HEAD --hard"
 alias gcd="echo 'To commit using past dates use the command: git commit --date=\"YYYY-MM-DD HH:MM:SS\"'"
+alias gcn="echo 'Running: git clone'; git clone "
 
 ## Development
 alias e="echo 'Running: env'; env"
