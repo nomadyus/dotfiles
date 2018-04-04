@@ -61,10 +61,11 @@ alias gbr="echo 'Running: git branch '; git branch "
 alias gbd="echo 'Running: git branch -d'; git branch -d "
 alias gmv="echo 'Running: git mv'; git mv "
 alias grl="echo 'Running: git reflog'; git reflog "
+alias grt="echo 'Running: git reset '; git reset "
 alias grs="echo 'Running: git reset '; git reset "
 alias grh="echo 'Running: git reset HEAD --hard'; git reset HEAD --hard"
-alias gcd="echo 'To commit using past dates use the command: git commit --date=\"YYYY-MM-DD HH:MM:SS\"'"
 alias gcn="echo 'Running: git clone'; git clone "
+alias gcd="echo 'To commit using past dates use the command: git commit --date=\"YYYY-MM-DD HH:MM:SS\"'"
 
 ## Development
 alias e="echo 'Running: env'; env"
