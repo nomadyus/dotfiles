@@ -69,6 +69,7 @@ alias gcd="echo 'To commit using past dates use the command: git commit --date=\
 
 ## Development
 alias e="echo 'Running: env'; env"
+alias m="echo 'Running: mv'; mv "
 alias mkd="echo 'Running: mkdir'; mkdir "
 alias rmd="echo 'Running: rm -rf'; rm -rf "
 alias src="echo 'Sourcing ~/.bash_profile'; source ~/.bash_profile"
