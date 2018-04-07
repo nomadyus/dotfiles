@@ -11,6 +11,7 @@ export VAULT_ADDR=http://127.0.0.1:8200
 
 printf '\nSetting flag to not use New Relic config file.\n'
 export NEW_RELIC_NO_CONFIG_FILE=true
+export NEW_RELIC_ENABLED=false
 
 ## Export properties for the terminal settings
 # Locale
