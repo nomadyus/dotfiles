@@ -16,7 +16,7 @@ export NEW_RELIC_ENABLED=false
 ## Export properties for the terminal settings
 # Locale
 export LC_ALL=en_US.UTF-8
-export LANG="en_US"
+export LANG="en_CA"
 
 # Colors
 RED="$(tput setaf 1)"
