@@ -16,7 +16,7 @@ prompt_clean_symbol="✿ "
 prompt_dirty_symbol="☂ "
 prompt_venv_symbol="☁ "
 
-function prompt_command() {
+function promptCommand() {
 	# Local or SSH session?
 	local remote=
 	[ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ] && remote=1
@@ -78,4 +78,4 @@ function prompt_command() {
 }
 
 # Show awesome prompt only if Git is istalled
-command -v git >/dev/null 2>&1 && PROMPT_COMMAND=prompt_command
+command -v git >/dev/null 2>&1 && PROMPT_COMMAND=promptCommand

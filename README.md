@@ -42,8 +42,8 @@ The bash profile script at **[`/bash/profile.sh`](https://github.com/yusuf-kami/
 
 #### Theme
 A theme for the bash console I really like called [Dracula](https://draculatheme.com/) is also included.
-- You can set up the terminal theme importing the [profile](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.terminal) from `./bin/Dracula.terminal` into the **Terminal**.
-- For **iTerm2** you will have to import the [color presets](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.terminal) from `./bin/Dracula.terminal`into the a new profile and apply it to the console.
+- You can set up the terminal theme by importing the [profile](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.terminal) in file `./bin/Dracula.terminal` into the **Terminal**.
+- For **iTerm2** you will have to import the [color presets](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.terminal) in `./bin/Dracula.terminal` into the a new profile and apply it to the console.
 
 These profiles can always be adjusted to your preferences once they are downloaded. The current look of the *Dracula* theme on Terminal is as follows:
 ![Dracula theme in Terminal](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.png)
@@ -51,5 +51,5 @@ These profiles can always be adjusted to your preferences once they are download
 
 ### Git
 #### Git Profile Manager
-The Git Profie Manager at **[`/git/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh)** sets the user name and email used to interface with GitHub or Bitbucket. It also sets the Hostname used to connect to GitHub for profiles that have more than one user accounts for the same provider.
+The Git Profile Manager at **[`/git/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh)** sets the user name and email used to interface with GitHub or Bitbucket. It also sets the Hostname used to connect to GitHub for profiles that have more than one user accounts for the same provider.
 The manager is run using the `gpf` command in the console.
