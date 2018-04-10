@@ -52,4 +52,19 @@ These profiles can always be adjusted to your preferences once they are download
 ### Git
 #### Git Profile Manager
 The Git Profile Manager at **[`/git/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh)** sets the user name and email used to interface with GitHub or Bitbucket. It also sets the Hostname used to connect to GitHub for profiles that have more than one user accounts for the same provider.
-The manager is run using the `gpf` command in the console.
+In order to be able to use the Git Profile Manager you must set up the alias in your `~/.bash_profile` with the following additions:
+```
+alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
+
+```
+The manager can then be run using the `gpf` command in the console.
+
+#### Git Rebaser
+Included is also a Git Rebaser at **[`/git/rebaser.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/git/rebaser.sh)** that is able to find all the Git directories in the system and performs a `git pull --rebase` command on all the directories.
+In order to enable the Rebaeser you can add the following alias in the `~/.bash_profile` file:
+ 
+```
+alias grb="echo 'Running: Git Rebaser'; $DOTFILES_DIR/git/rebaser.sh "
+
+```
+The Rebaser can then be run using the `grb` command in the console.
