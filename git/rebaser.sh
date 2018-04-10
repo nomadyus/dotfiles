@@ -12,7 +12,7 @@ programName=$0
 
 function usage {
   echo "Git Rebaser"
-  echo "description: This goes through all directories recursively and performs a `git pull --rebase` command on all git directoies."
+  echo "description: This goes through all directories recursively and performs a `git pull --rebase` command on all Git directoies."
   echo "usage: $programName"
   exit 1
 }
