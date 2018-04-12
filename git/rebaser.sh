@@ -20,10 +20,20 @@ function usage {
 export GIT_REBASER="$BASE_DIR/rebaser.sh"
 
 # Invoke Usage function
-[ -z $1 ] && { usage; }
+[[ $1 == '--help' || $1 == 'help' ]] && { usage; }
 
 # Run script
 printf "\nRunning Git Rebaser.\n"
+
+function checkForGitDependency() {
+  printf "Checking that you have Git installed.\n"
+  if ! which git &> /dev/null
+    then
+      printf "I need Git installed to proceed!\n"
+      exit 1
+  fi
+  printf "You got Git. Nice!\n"
+}
 
 function checkForGitDirectory() {
 
