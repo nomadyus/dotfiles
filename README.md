@@ -34,13 +34,13 @@ alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
 
 ## Included
 The repository includes the following configuration and tools:
-### Bash
-#### Aliases
+### 1. Bash
+#### 1.1. Aliases
 This **[`/bash/aliases.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/aliases.sh)** bash script contains all the aliases for the most frequently used commands and sets them for the console.
-#### Profile
+#### 1.2. Profile
 The bash profile script at **[`/bash/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/profile.sh)** is also included to setup the profile and display preference for the terminal.
 
-#### Theme
+#### 1.3. Theme
 A theme for the bash console I really like called [Dracula](https://draculatheme.com/) is also included.
 - You can set up the terminal theme by importing the [profile](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.terminal) in file `./bin/Dracula.terminal` into the **Terminal**.
 - For **iTerm2** you will have to import the [color presets](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.terminal) in `./bin/Dracula.terminal` into the a new profile and apply it to the console.
@@ -49,21 +49,19 @@ These profiles can always be adjusted to your preferences once they are download
 ![Dracula theme in Terminal](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.png)
 
 
-### Git
-#### Git Profile Manager
+### 2. Git
+#### 2.1. Git Profile Manager
 The Git Profile Manager at **[`/git/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh)** sets the user name and email used to interface with GitHub or Bitbucket. It also sets the Hostname used to connect to GitHub for profiles that have more than one user accounts for the same provider.
 In order to be able to use the Git Profile Manager you must set up the alias in your `~/.bash_profile` with the following additions:
 ```
 alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
-
 ```
 The manager can then be run using the `gpf` command in the console.
 
-#### Git Rebaser
+#### 2.2. Git Rebaser
 Included is also a Git Rebaser at **[`/git/rebaser.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/git/rebaser.sh)** that is able to find all the Git directories in the system and performs a `git pull --rebase` command on all the directories.
 In order to enable the Rebaser you can add the following alias in the `~/.bash_profile` file:
 ```
 alias grr="echo 'Running: Git Rebaser'; $DOTFILES_DIR/git/rebaser.sh "
-
 ```
 The Rebaser can then be run using the `grr` command in the console.
