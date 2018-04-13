@@ -37,8 +37,6 @@ function checkForGitDependency() {
 
 function checkForGitDirectory() {
 
-checkForGitDependency
-
 for item in `echo *`;
   do
   echo "Checking '$item' is a git directory.";
@@ -63,5 +61,7 @@ for item in `echo *`;
   fi
 done;
 }
+
+checkForGitDependency
 
 checkForGitDirectory
