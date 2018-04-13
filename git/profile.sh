@@ -88,8 +88,8 @@ elif [ 'kami' = "${PROFILE}" ]; then
   REMOTE_ORIGIN=${REMOTE_ORIGIN/@telus.github./@github.}
 
 elif [ 'bb' = "${PROFILE}" ]; then
-  printf "Using the 'Yusuf Kami' Bitbucket profile.\n"
-  git config user.name "Yusuf Kami"
+  printf "Using the 'Yusuf Fadairo' Bitbucket profile.\n"
+  git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.kami@gmail.com"
 
 else
