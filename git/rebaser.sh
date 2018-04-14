@@ -1,6 +1,6 @@
 #!/bin/sh
 ## Git Rebaser
-# This goes through all directories recursively and performs a 'git pull --rebase' command on all git directoies.
+# This goes through all directories recursively startin from the current one and performs a 'git pull --rebase' command on all Git directoies.
 
 BASE_DIR=$(dirname $_)
 
