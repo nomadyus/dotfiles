@@ -1,6 +1,6 @@
 #!/bin/sh
 ## Git Profile Manager
-# Given a Git profile (GitHub, Bitbucket, etc.) it sets the git config parameters appropriately
+# Given a Git profile (GitHub, Bitbucket, etc.) it updates the git config parameters appropriately.
 
 BASE_DIR=$(dirname $_)
 
@@ -12,9 +12,9 @@ programName=$0
 
 function usage {
   echo "Git Profile Manager"
-  echo "description: given a Git profile (GitHub, Bitbucket, etc.) it sets the git config parameters appropriately."
+  echo "description: given a Git profile (GitHub, Bitbucket, etc.) it updates the git config parameters appropriately."
   echo "usage: $programName [profile]"
-  echo "  [profile]   the name of the profile to used. One of 'telus', 'kami' and 'bb'"
+  echo "  [profile]  the name of the profile to be used. One from 'telus', 'kami' or 'bb'."
   exit 1
 }
 
