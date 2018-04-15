@@ -21,7 +21,7 @@ function usage {
 export GIT_PROFILE="$BASE_DIR/profile.sh"
 
 # Invoke Usage function
-[ -z $1 ] && { usage; }
+[[ -z $1 || $1 == '--help' || $1 == 'help'  ]] && { usage; }
 
 # Run script
 printf "\nRunning Git Profile Manager.\n"
