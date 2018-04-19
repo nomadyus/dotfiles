@@ -1,5 +1,8 @@
 #!/bin/sh
 # Should be linked with .git/hooks/pre-push
+# You can pferform the symlink with the command:
+#   rm .git/hooks/*
+#   ln -fsv "$(PWD)/git/pre-push" .git/hooks/pre-push
 
 # Exit immediately if a command exits with a non-zero status.
 set -e

@@ -2,7 +2,6 @@
 # Should be linked with .git/hooks/commit-msg
 # You can pferform the symlink with the command:
 #   rm .git/hooks/*
-#   ln -fsv "$(PWD)/git/pre-push" .git/hooks/pre-push
 #   ln -fsv "$(PWD)/git/commit-msg" .git/hooks/commit-msg
 printf "\nValidating commit message format...\n\n"
 
