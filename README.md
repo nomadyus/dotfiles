@@ -64,3 +64,6 @@ In order to enable the Rebaser you can add the following alias in the `~/.bash_p
 alias grr="echo 'Running: Git Rebaser'; $DOTFILES_DIR/git/rebaser.sh "
 ```
 The Rebaser can then be run using the `grr` command in the console.
+
+#### Git Hooks
+There are also git hooks included in the **[`/git/`](https://github.com/yusuf-kami/dotfiles/blob/master/git/)** directory. Included are the scripts for the commit message template with the message validation, and the git push hook.
