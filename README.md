@@ -67,3 +67,9 @@ The Rebaser can then be run using the `grr` command in the console.
 
 #### 2.3 Git Hooks
 There are also git hooks included in the **[`/git/`](https://github.com/yusuf-kami/dotfiles/blob/master/git/)** directory. Included are the scripts for the commit message template with the message validation, and the git push hook.
+The hooks can be symlinked using the following commands:
+```
+ rm .git/hooks/*
+ ln -fsv "$(PWD)/git/commit-msg" .git/hooks/commit-msg
+ ln -fsv "$(PWD)/git/pre-push" .git/hooks/pre-push
+```
