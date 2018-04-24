@@ -6,6 +6,12 @@ function printAllHistory() {
   for history in `echo ~/.bash_sessions/*`; do echo "Printing history in '$history' file"; while read -r line; do echo "$line"; done < $history; done;
 }
 
+function getPort() {
+  echo "Get port of process with PID '$1'."
+  echo "Running lsof -Pan -p $1 -i"
+  lsof -Pan -p $1 -i
+}
+
 ##  Navigation
 alias b="echo 'Running: cd ~/Documents'; cd ~/Documents; pwd"
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
@@ -109,4 +115,4 @@ alias dkl="echo 'Running: docker kill'; docker kill "
 ## Magic
 alias psa="echo 'Running: ps aux'; ps aux"
 alias psg="echo 'Running: ps aux | grep '; ps aux | grep "
-alias pan="echo 'Get port of PID. Running lsof -Pan -p PID -i'; lsof -Pan -p PID -i "
+alias pan=getPort
