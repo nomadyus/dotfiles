@@ -3,7 +3,12 @@
 
 ## Complex functions
 function printAllHistory() {
-  for history in `echo ~/.bash_sessions/*`; do echo "Printing history in '$history' file"; while read -r line; do echo "$line"; done < $history; done;
+  for history in `echo ~/.bash_sessions/*`;
+    do echo "Printing history in '$history' file";
+    while read -r line;
+      do echo "$line";
+    done < $history;
+  done;
 }
 
 function getPort() {
