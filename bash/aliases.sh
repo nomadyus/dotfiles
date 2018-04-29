@@ -28,8 +28,8 @@ alias ....="echo 'Running: cd ../../..'; cd ../../..; pwd"
 alias .....="echo 'Running: cd ../../../..'; cd ../../../..; pwd"
 alias ~="echo 'Running: cd ~'; cd ~; pwd"
 alias c="echo 'Running: cd'; cd "
-alias l="echo 'Running: lsa'; lsa;"
-alias p="echo 'Running: pwd'; pwd;"
+alias l="echo 'Running: lsa'; lsa "
+alias p="echo 'Running: pwd'; pwd"
 alias -- -="echo 'Running cd -'; cd -"
 
 ## Git
