@@ -17,6 +17,29 @@ function getPort() {
   lsof -Pan -p $1 -i
 }
 
+function unFind() {
+	while read -r item;
+		do
+		if [[ $item == *"__MACOSX"* ]]; then
+    		echo "Ignoring '$item' and moving on."
+    	elif [[ $item == *".jpg" ]] \
+        || [[ $item == *".jpg" ]] \
+        || [[ $item == *".ipynb" ]] \
+        || [[ $item == *".py" ]] \
+        || [[ $item == *".xml" ]] \
+        || [[ $item == *".yml" ]] \
+        || [[ $item == *".txt" ]] \
+        || [[ $item == *".gitignore" ]] \
+        || [[ $item == *".html" ]]
+        || [[ $item =~ ^(.*)(\.[a-z]{1,9})$ ]]; then
+    		echo "Entry '$item' is a file";
+		else
+			echo "Making directory '$PWD/$item'"
+			mkdir -pv "$PWD/$item"
+		fi
+	done;
+}
+
 ##  Navigation
 alias b="echo 'Running: cd ~/Documents'; cd ~/Documents; pwd"
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
