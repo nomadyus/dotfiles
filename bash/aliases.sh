@@ -30,7 +30,7 @@ function unFind() {
         || [[ $item == *".yml" ]] \
         || [[ $item == *".txt" ]] \
         || [[ $item == *".gitignore" ]] \
-        || [[ $item == *".html" ]]
+        || [[ $item == *".html" ]] \
         || [[ $item =~ ^(.*)(\.[a-z]{1,9})$ ]]; then
     		echo "Entry '$item' is a file";
 		else
