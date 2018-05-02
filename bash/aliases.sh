@@ -125,6 +125,8 @@ alias v="echo 'Running: vi'; vi "
 alias r="echo 'Running: cat'; cat "
 alias t="echo 'Running: tail'; tail "
 alias taf="echo 'Running: tail -f'; tail -f "
+alias tac="echo 'Running: tar -zcvf'; tar -zcvf "
+alias tuc="echo 'Running: tar -zxvf'; tar -zxvf "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
