@@ -17,7 +17,7 @@ function getPort() {
   lsof -Pan -p $1 -i
 }
 
-function unFind() {
+function unfind() {
 	while read -r item;
 		do
 		if [[ $item == *"__MACOSX"* ]]; then
