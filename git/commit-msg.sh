@@ -6,7 +6,7 @@
 printf "\nValidating commit message format...\n\n"
 
 # Regex for the commit message
-commit_message_regex='^\s-[[:digit:]]{3,4}\s-\s\w+(\s&\s\w+)?:\s.+$'
+commit_message_regex='^.+\s-\s.+\s:\s(.+)\.$'
 
 if ! grep -Eq "$commit_message_regex" "$1"; then
 cat << EOF >&2
