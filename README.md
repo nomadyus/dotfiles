@@ -73,3 +73,22 @@ The hooks can be symlinked using the following commands:
  ln -fsv "$(PWD)/git/commit-msg" .git/hooks/commit-msg
  ln -fsv "$(PWD)/git/pre-push" .git/hooks/pre-push
 ```
+#### 2.4 Git History
+Sometimes there will be a need to rewrite the history that has already been pushed to origin. This ca be done with the following steps that was obtained from this Stackoverflow [issue](https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit):
+1. Checkout the commit to be updated:
+```
+  git checkout OLD_COMMIT_HASH
+```
+2. Make the changes to the commit using `git commit --amend`. With this command you can change even the *Author* of the commit with the `--author` parameter. After this command you should get a new commit hash (NEW_COMMIT_HASH) identifying the introduced changes.
+3. Checkout to the main branch with `git checkout`
+4. Replace the old commit with the amended commit:
+```
+  git replace OLD_COMMIT_HASH NEW_COMMIT_HASH
+```
+5. Rewrite the history of all future commits in your trunk:
+```
+  git filter-branch -- --all
+```
+6. Delete the old commit with `git replace -d OLD_COMMIT_HASH`
+
+7. Push the changes to origin with `git push --force-with-lease`. If there is any issue with the `push` command then you force the update with `git push --force`.
