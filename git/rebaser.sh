@@ -44,17 +44,20 @@ for item in `echo *`;
   if [ $item == "node_modules" ] || [ $item == ".DS_Store" ] || [ $item == "build" ] || [ $item == "dist" ] || [ $item == "cache" ]; then
     echo "Ignoring $PWD/$item and moving on."
 
+    elif [ -d "$PWD/$item/.git" ]; then
+      echo "'$PWD/$item' is a git directory. We can perform a 'git pull --rebase' command."
+      cd $item
+      echo "Performing 'git pull --rebase' command."
+      git pull --rebas
+      cd ..
+      echo "Rebase completed."
+
     elif [ -d "$PWD/$item/" ]; then
       echo "$PWD/$item is a regular directory. Performing recursion on it."
       cd $item
       checkForGitDirectory
       cd ..
       echo "Done with directory."
-
-    elif [ -d "$PWD/$item/.git" ]; then
-      echo "$PWD is a git directory. We can perform a `git pull --rebase` command."
-      echo "Performing `git pull --rebase` command."
-      echo "Rebase completed."
 
     else
       echo "$PWD/$item is just a file."
