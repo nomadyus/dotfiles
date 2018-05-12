@@ -15,7 +15,7 @@ printf "\nRunning pre-push hook...\n\n"
 
 checkForOnlys() {
     if grep --quiet --recursive --exclude-dir=node_modules '\.only(' "$1"; then
-      echo 'Oh poop! .only found on tests, please remove before pushing:\n'
+      echo 'Oh poop! ".only" found on tests, please remove before pushing:\n'
       grep -H --line-number --recursive --exclude-dir=node_modules '\.only' "$1" | awk '{print "💩 " $0}'
       echo
       exit 1
