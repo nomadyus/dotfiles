@@ -104,7 +104,7 @@ printf "Your Git profile has been set.\n"
 printf "\nYour Git global config is:\n"
 git config --global --list
 
-printf "\nYour Git config for your local repo is:\n"
+printf "\nYour Git config for the local repo is:\n"
 git config --local --list
 
 printf "\nProfile management completed successfully.\n"
