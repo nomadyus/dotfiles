@@ -45,6 +45,7 @@ alias c="echo 'Running: cd'; cd "
 alias l="echo 'Running: lsa'; lsa "
 alias p="echo 'Running: pwd'; pwd"
 alias -- -="echo 'Running cd -'; cd -"
+alias siz="echo 'Printing directory size'; du -sh "
 
 ## Git
 alias gst="echo 'Running: git status'; git status "
