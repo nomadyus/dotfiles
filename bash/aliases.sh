@@ -137,4 +137,4 @@ alias dkl="echo 'Running: docker kill'; docker kill "
 ## Magic
 alias psa="echo 'Running: ps aux'; ps aux "
 alias psg="echo 'Running: ps aux | grep '; ps aux | grep "
-alias pan="echo 'Running get port for process'; getPort"
+alias pan="echo 'Running get port for process'; getPort "
