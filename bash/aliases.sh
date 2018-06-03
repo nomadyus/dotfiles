@@ -2,6 +2,7 @@
 ## Setup for bash aliases
 
 ## Complex functions
+## View all historical commands
 function printAllHistory() {
   for history in `echo ~/.bash_sessions/*`;
     do echo "Printing history in '$history' file";
