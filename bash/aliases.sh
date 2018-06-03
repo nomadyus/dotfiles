@@ -12,6 +12,7 @@ function printAllHistory() {
   done;
 }
 
+## Get the port an application process is running on.
 function getPort() {
   echo "Get port of process with PID '$1'."
   echo "Running lsof -Pan -p $1 -i"
