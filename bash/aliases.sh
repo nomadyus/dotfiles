@@ -33,6 +33,20 @@ function unfind() {
 	done;
 }
 
+## Print the disk usage for file and folders in current directory.
+function folderSize() {
+  for item in `echo *`;
+  do
+    if [[ -d $item ]]; then
+      cd $item;
+      echo "Folder /$item size: $(du -sh)";
+      cd ..;
+    else
+      echo "File size: $(du -sh $item)";
+    fi
+  done;
+}
+
 ##  Navigation
 alias b="echo 'Running: cd ~/Documents'; cd ~/Documents; pwd"
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
