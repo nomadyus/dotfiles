@@ -2,7 +2,7 @@
 ## Setup for bash aliases
 
 ## Complex functions
-## View all historical commands
+## View all commands that have been executed in all sessions.
 function printAllHistory() {
   for history in `echo ~/.bash_sessions/*`;
     do echo "Printing history in '$history' file";
@@ -19,6 +19,7 @@ function getPort() {
   lsof -Pan -p $1 -i
 }
 
+## Build a directory structure using the output of the find command.
 function unfind() {
 	while read -r item;
 		do
