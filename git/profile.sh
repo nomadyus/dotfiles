@@ -27,7 +27,7 @@ export GIT_PROFILE="$BASE_DIR/profile.sh"
 printf "\nRunning Git Profile Manager.\n"
 
 ## Input Parameter(s)
-# 1. Profile name [telus, kami, bb]
+# 1. Profile name to use (one of: 'telus', 'kami' or 'bb')
 PROFILE=${1:-}
 
 function checkForGitDependency() {
