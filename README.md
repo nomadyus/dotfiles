@@ -73,6 +73,7 @@ The hooks can be symlinked using the following commands:
  ln -fsv "$(PWD)/git/commit-msg" .git/hooks/commit-msg
  ln -fsv "$(PWD)/git/pre-push" .git/hooks/pre-push
 ```
+
 #### 2.4 Git History
 Sometimes there will be an *urgent* need to rewrite the history that has already been pushed to origin. This ca be done with the following steps that was obtained from this Stack Overflow [issue](https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit):
 1. Checkout the commit to be updated:
