@@ -75,12 +75,12 @@ The hooks can be symlinked using the following commands:
 ```
 
 #### 2.4 Git History
-Sometimes there will be an *urgent* need to rewrite the history that has already been pushed to origin. This ca be done with the following steps that was obtained from this Stack Overflow [issue](https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit):
+Sometimes there will be an *urgent* need to rewrite the history that has already been pushed to origin. This can be done with the following steps that was obtained from this Stack Overflow [issue](https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit):
 1. Checkout the commit to be updated:
 ```
   git checkout OLD_COMMIT_HASH
 ```
-2. Make the changes to the commit using `git commit --amend`. With this command you can change even the *Author* of the commit with the `--author` parameter. After this command you should get a new commit hash (NEW_COMMIT_HASH) identifying the introduced changes.
+2. Make the changes to the commit using `git commit --amend`. With this command you can change even the *Author* of the commit with the `--author` parameter. After this command you should get a new commit hash (NEW_COMMIT_HASH) identifying the introduced changes into the branch.
 3. Checkout to the main branch with `git checkout`
 4. Replace the old commit with the amended commit:
 ```
@@ -92,4 +92,4 @@ Sometimes there will be an *urgent* need to rewrite the history that has already
 ```
 6. Delete the old commit with `git replace -d OLD_COMMIT_HASH`
 
-7. Push the changes to origin with `git push --force-with-lease`. If there is any issue with the `push` command then you force the update with `git push --force`.
+7. Push the changes to origin with `git push --force-with-lease`. If there is any issue with the `push` command then you can force the update with `git push --force` instead.
