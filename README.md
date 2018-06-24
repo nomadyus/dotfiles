@@ -2,7 +2,7 @@
 A collection of scripts and code snippets used to set up my development environment.
 
 ## Installation
-In order to install the `dotfiles` CLI use the following commands:
+In order to use `dotfiles` you must first install the `dotfiles` CLI with the following commands:
 ```
  git clone https://github.com/yusuf-kami/dotfiles.git ~/dotfiles
  cd ~/dotfiles
