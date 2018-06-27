@@ -6,7 +6,7 @@ In order to use `dotfiles` CLI you must first get the source and from its GitHub
 ```
  git clone https://github.com/yusuf-kami/dotfiles.git ~/dotfiles
  cd ~/dotfiles
- chmod +x dotfiles.sh
+ chmod +x ./dotfiles.sh
  source ./dotfiles.sh
 ```
 
@@ -19,7 +19,7 @@ Add the path of the directory for `./dotfiles.sh` file to your `~/.bash_profile`
 #~/.bash_profile
 echo "Storing the dotfiles path to ~/.bash_profile"
 export DOTFILES_DIR=[PATH_TO_DOTFILES_DIR]
-alias dotfiles="pushd $(pwd); cd $DOTFILES_DIR; source ./dotfiles.sh; popd"
+alias dotfiles="pushd $(pwd); cd $DOTFILES_DIR; source ./dotfiles.sh; popd;"
 
 echo "Loading dotfiles"
 dotfiles
