@@ -1,5 +1,5 @@
 # dotfiles
-A collection of scripts and code snippets used to set up my development environment.
+A collection of scripts and code snippets used to set up my development environment and profiles.
 
 ## Installation
 In order to use `dotfiles` CLI you must first get the source and from its GitHub [repo](https://github.com/yusuf-kami/dotfiles) with the following commands:
