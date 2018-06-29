@@ -10,6 +10,7 @@ In order to use `dotfiles` CLI you must first get the source and from its GitHub
  source ./dotfiles.sh
 ```
 
+
 ## Setup
 Setting up the dotfiles is as easy as `source ./dotfiles.sh` in any bash environment.
 
