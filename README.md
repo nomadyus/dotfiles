@@ -49,6 +49,8 @@ A theme for the bash console I really like called [Dracula](https://draculatheme
 These profiles can always be adjusted to your preferences once they are downloaded. The current look of the *Dracula* theme on Terminal is as follows:
 ![Dracula theme in Terminal](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.png)
 
+#### 1.4 `tmux`
+You can also use `tmux` which is also included within the bash setup script. This is a very useful and versatile tool for multiplexing and the script used to install it is provided [here](https://gist.github.com/simme/1297707). To start a multiplexed session just use the command `tmux`.
 
 ### 2. Git
 #### 2.1. Git Profile Manager
