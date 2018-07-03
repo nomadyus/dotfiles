@@ -50,7 +50,23 @@ These profiles can always be adjusted to your preferences once they are download
 ![Dracula theme in Terminal](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.png)
 
 #### 1.4 `tmux`
-You can also use `tmux` which is also included within the bash setup script. This is a very useful and versatile tool for multiplexing and the script used to install it is provided [here](https://gist.github.com/simme/1297707). To start a multiplexed session just use the command `tmux`.
+You can also use `tmux` which is also installed within the bash setup script. This is a very useful and versatile tool for multiplexing and the script used to install it is provided [here](https://gist.github.com/simme/1297707). To start a multiplexed session just use the command `tmux`.
+Once in a `tmux` window in order to run *special commands* you need to input the *prefix* command which is **Ctrl+b**. With this prefix provided new windows or panes can be created and navigated with the following *key binding*:
+- create new window: `c`
+- create new pane to left: `%`
+- create new pane to bottom: `"`
+- kill current pane: `!`
+- kill current window: `&`
+- navigate to next window: `n`
+- navigate to previous window: `l`
+- navigate to next pane: `o`
+- navigate to previous pane: `;`
+- show description: `i`
+- show pane information: `q`
+- change layout: `Space`
+  
+To view all created windows out of the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-serve` is used.
+**NOTE**:To view all possible *key bindings* use the command `tmux list-keys`
 
 ### 2. Git
 #### 2.1. Git Profile Manager
