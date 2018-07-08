@@ -63,7 +63,7 @@ Once in a `tmux` window in order to run *special commands* you need to input the
 - navigate to previous pane: `;`
 - show description: `i`
 - show pane information: `q`
-- change layout: `Space`
+- change layout: `[Space]`
 - cycle panes: `Ctr+o`
 
 To view all created windows out of the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-serve` is used.
