@@ -66,7 +66,7 @@ Once in a `tmux` window in order to run *special commands* you need to input the
 - change layout: `[space]`
 - cycle panes: `Ctr+o`
 
-To view all created windows out of the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-serve` is used.
+To view all created windows out of the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-server` can be used.
 **NOTE**:To view all possible *key bindings* use the command `tmux list-keys`. And to include the command to clear the screen using the key **Ctl+k** use the command `tmux bind -n C-k send-keys -R \; send-keys C-l \; clear-history`
 
 ### 2. Git
