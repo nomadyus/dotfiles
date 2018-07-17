@@ -3,6 +3,7 @@
 # You can pferform the symlink with the command:
 #   rm .git/hooks/*
 #   ln -fsv "$(PWD)/git/commit-msg" .git/hooks/commit-msg
+
 printf "\nValidating commit message format...\n\n"
 
 # Regex for the commit message
