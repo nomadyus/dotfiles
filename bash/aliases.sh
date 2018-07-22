@@ -1,7 +1,6 @@
 #!/bin/sh
 ## Setup for bash aliases
 
-## Complex functions
 ## View all commands that have been executed in all sessions.
 function printAllHistory() {
   for history in `echo ~/.bash_sessions/*`;

@@ -98,9 +98,9 @@ function installTmux() {
       # More on mouse support http://floriancrouzat.net/2010/07/run-tmux-with-mouse-support-in-mac-os-x-terminal-app/
 
       # Enable mouse support in ~/.tmux.conf
-      set-option -g mouse-select-pane on
-      set-option -g mouse-select-window on
-      set-window-option -g mode-mouse on
+      #  set-option -g mouse-select-pane on
+      #  set-option -g mouse-select-window on
+      #  set-window-option -g mode-mouse on
 
       # Install Teamocil to pre define workspaces
       # https://github.com/remiprev/teamocil
