@@ -86,6 +86,7 @@ function installTmux() {
 
   if ! which tmux &> /dev/null
     then
+      printf "The CLI for 'tmux' is not installed.\n"
       printf "We are installting 'tmux'!\n"
       # First install tmux
       brew install tmux
