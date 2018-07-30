@@ -48,7 +48,7 @@ for item in `echo *`;
       echo "'$PWD/$item' is a git directory. We can perform a 'git pull --rebase' command."
       cd $item
       echo "Performing 'git pull --rebase' command."
-      git pull --rebas
+      git pull --rebase
       cd ..
       echo "Rebase completed."
 
