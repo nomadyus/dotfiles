@@ -38,6 +38,8 @@ The repository includes the following configuration and tools:
 ### 1. Bash
 #### 1.1. Aliases
 This **[`/bash/aliases.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/aliases.sh)** bash script contains all the aliases for the most frequently used commands and sets them for the console.
+**NOTE**: It migth be helpfulful to determine the *code* or *script* attached to an *alias* or a *command*. In order to determine the scripts attached to a command/alias use the  command `type` on the command/alias in question.
+
 #### 1.2. Profile
 The bash profile script at **[`/bash/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/profile.sh)** is also included to setup the profile and display preference for the terminal.
 
@@ -67,14 +69,14 @@ Once in a `tmux` window in order to run *special commands* you need to input the
 - cycle panes: `Ctr+o`
 
 To view all created windows out of the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-server` can be used.
-**NOTE**:To view all possible *key bindings* use the command `tmux list-keys`. And to include the command to clear the screen using the key **Ctl+k** use the command `tmux bind -n C-k send-keys -R \; send-keys C-l \; clear-history`
+**NOTE**: To view all possible *key bindings* use the command `tmux list-keys`. And to include the command to clear the screen using the key **Ctl+k** use the command `tmux bind -n C-k send-keys -R \; send-keys C-l \; clear-history`
 
 ### 2. Git
 #### 2.1. Git Profile Manager
 The Git Profile Manager at **[`/git/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh)** sets the user name and email used to interface with GitHub or Bitbucket. It also sets the Hostname used to connect to GitHub for profiles that have more than one user accounts for the same provider.
 In order to be able to use the Git Profile Manager you must set up the alias in your `~/.bash_profile` with the following additions:
 ```~/.bash_profile
-alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
+ alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
 ```
 The manager can then be run using the `gpf` command in the console.
 
@@ -82,7 +84,7 @@ The manager can then be run using the `gpf` command in the console.
 Included is also a Git Rebaser at **[`/git/rebaser.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/git/rebaser.sh)** that is able to find all the Git directories in the system and performs a `git pull --rebase` command on all the directories.
 In order to enable the Rebaser you can add the following alias in the `~/.bash_profile` file:
 ```~/.bash_profile
-alias grr="echo 'Running: Git Rebaser'; $DOTFILES_DIR/git/rebaser.sh "
+ alias grr="echo 'Running: Git Rebaser'; $DOTFILES_DIR/git/rebaser.sh "
 ```
 The Rebaser can then be run using the `grr` command in the console.
 
