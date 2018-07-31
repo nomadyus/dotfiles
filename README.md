@@ -18,18 +18,18 @@ Setting up the dotfiles is as easy as `source ./dotfiles.sh` in any bash environ
 ## Reloading
 Add the path of the directory for `./dotfiles.sh` file to your `~/.bash_profile` using the environment variables `DOTFILES_DIR` like below:
 ```
-#~/.bash_profile
-echo "Storing the dotfiles path to ~/.bash_profile"
-export DOTFILES_DIR=[PATH_TO_DOTFILES_DIR]
-alias dotfiles="pushd $(pwd); cd $DOTFILES_DIR; source ./dotfiles.sh; popd;"
+  #~/.bash_profile
+  echo "Storing the dotfiles path to ~/.bash_profile"
+  export DOTFILES_DIR=[PATH_TO_DOTFILES_DIR]
+  alias dotfiles="pushd $(pwd); cd $DOTFILES_DIR; source ./dotfiles.sh; popd;"
 
-echo "Loading dotfiles"
-dotfiles
+  echo "Loading dotfiles"
+  dotfiles
 ```
 In order to reload the dotfile you can simply source the file using the path in the environment variable with the command `dotfiles`.
 Setting the `DOTFILES_DIR` environment variable also lets you set up an alias for the [Git Profile Manager](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh) by adding the following line to your `~/.bash_profile`
 ```
-alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
+  alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
 ```
 
 
