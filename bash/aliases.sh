@@ -47,6 +47,15 @@ function folderSize() {
   done;
 }
 
+## Print a string of characters multiple times
+function printfMultiple() {
+ string=$1
+ times=$2
+ times=${times:-1}
+ operation="%1.s${string}."
+ printf $operation $(eval echo {1..$times})
+}
+
 ##  Navigation
 alias b="echo 'Running: cd ~/Documents'; cd ~/Documents; pwd"
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
