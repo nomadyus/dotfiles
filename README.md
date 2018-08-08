@@ -68,8 +68,10 @@ Once in a `tmux` window in order to run *special commands* you need to input the
 - change layout: `[space]`
 - cycle panes: `Ctr+o`
 
-To view all created windows out of the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-server` can be used.
-**NOTE**: To view all possible *key bindings* use the command `tmux list-keys`. And to include the command to clear the screen using the key **Ctl+k** use the command `tmux bind -n C-k send-keys -R \; send-keys C-l \; clear-history`
+To view all created windows externally from the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-server` can be used.
+**NOTE**: To view all possible *key bindings* use the command `tmux list-keys`.
+
+**NOTE**: In order to include the command to clear the screen using the key **Ctl+k** use the command `tmux bind -n C-k send-keys -R \; send-keys C-l \; clear-history`
 
 ### 2. Git
 #### 2.1. Git Profile Manager
@@ -98,7 +100,7 @@ The hooks can be symlinked using the following commands:
 ```
 
 #### 2.4 Git History
-Sometimes there will be an *urgent* need to rewrite the history that has already been pushed to origin. This can be done with the following steps that was obtained from this ***Stack Overflow [issue](https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit)**:
+Sometimes there will be an *urgent* need to rewrite the history that has already been pushed to origin. This can be done with the following steps that was obtained from this **Stack Overflow [issue](https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit)**:
 1. Checkout the commit to be updated:
 ```
   git checkout OLD_COMMIT_HASH
