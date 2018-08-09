@@ -1,11 +1,16 @@
 # dotfiles
 A collection of scripts and code snippets used to set up my development environment and profiles.
 
+## tl;dr
+```
+ source ./dotfiles.sh; alias;
+```
+
 ## Installation
 In order to use `dotfiles` CLI you must first get the source and from its GitHub [repo](https://github.com/yusuf-kami/dotfiles) with the following commands:
 ```
- git clone https://github.com/yusuf-kami/dotfiles.git ~/dotfiles
- cd ~/dotfiles
+ git clone https://github.com/yusuf-kami/dotfiles.git dotfiles
+ cd dotfiles
  chmod +x ./dotfiles.sh
  source ./dotfiles.sh
 ```
