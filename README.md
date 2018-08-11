@@ -1,5 +1,5 @@
 # dotfiles
-A collection of scripts and code snippets used to set up my development environment and profiles.
+A collection of scripts and code snippets used to set up and startup my development environment and profiles.
 
 ## tl;dr
 ```
