@@ -15,6 +15,7 @@ prompt_symbol="-❥"
 prompt_clean_symbol="✿ "
 prompt_dirty_symbol="☂ "
 prompt_venv_symbol="☁ "
+promot_conda_symbol="🐍 "
 
 function promptCommand() {
 	# Local or SSH session?
@@ -47,6 +48,12 @@ function promptCommand() {
 	local venv_prompt=
 	if [ -n "$VIRTUAL_ENV" ]; then
 	    venv_prompt=" $BLUE$prompt_venv_symbol$(basename $VIRTUAL_ENV)$NOCOLOR"
+	fi
+
+  # Conda ENV
+	local conda_prompt=
+	if [ -n "$CONDA_PREFIX" ]; then
+	    venv_prompt=" $BLUE$promot_conda_symbol$(basename $CONDA_PREFIX)$NOCOLOR"
 	fi
 
 	# Only show username if not default
