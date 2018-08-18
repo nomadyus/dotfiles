@@ -71,7 +71,6 @@ alias l="echo 'Running: lsa'; lsa "
 alias p="echo 'Running: pwd'; pwd"
 alias -- -="echo 'Running cd -'; cd -"
 alias siz="echo 'Printing directory size'; du -sh "
-alias kil="echo 'Running: kill -9'; kill -9 "
 
 ## Git
 alias gst="echo 'Running: git status'; git status "
@@ -152,6 +151,7 @@ alias t="echo 'Running: tail'; tail "
 alias taf="echo 'Running: tail -f'; tail -f "
 alias tac="echo 'Running: tar -zcvf'; tar -zcvf "
 alias tuc="echo 'Running: tar -zxvf'; tar -zxvf "
+alias kil="echo 'Running: kill -9'; kill -9 "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
