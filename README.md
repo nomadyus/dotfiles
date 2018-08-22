@@ -72,6 +72,8 @@ Once in a `tmux` window in order to run *special commands* you need to input the
 - show pane information: `q`
 - change layout: `[space]`
 - cycle panes: `Ctr+o`
+- scrollback: `[Page UP|Down]`
+- search: `Ctr+s` (during scrollback)
 
 To view all created windows externally from the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-server` can be used.
 **NOTE**: To view all possible *key bindings* use the command `tmux list-keys`.
