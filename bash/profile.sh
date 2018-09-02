@@ -15,7 +15,7 @@ prompt_symbol="-❥"
 prompt_clean_symbol="✿ "
 prompt_dirty_symbol="☂ "
 prompt_venv_symbol="☁ "
-promot_conda_symbol="🐍 "
+promot_conda_symbol="🐍  "
 
 function promptCommand() {
 	# Local or SSH session?
