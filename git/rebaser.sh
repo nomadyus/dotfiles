@@ -51,8 +51,8 @@ for item in `echo *`;
       git stash save 'rebase-stash'
       echo "Performing 'git pull --rebase' command."
       git pull --rebase
-      echo "Using stashed changes any uncommited changes before pulling updates."
-      git stash apply stash^{/rebase-stash}
+      echo "Using stashed changes if any is available."
+      git stash apply stash^{/rebase-stash} || true
       cd ..
       echo "Rebase completed."
 
