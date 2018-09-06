@@ -14,7 +14,7 @@ function usage {
   echo "Git Profile Manager"
   echo "description: given a Git profile (GitHub, Bitbucket, etc.) it updates the git config parameters appropriately."
   echo "usage: $programName [profile]"
-  echo "  [profile]  the name of the profile to be used. One from 'telus', 'kami' or 'bb'."
+  echo "  [profile] the name of the profile to be used. One from 'telus', 'kami' or 'bb'."
   exit 1
 }
 
@@ -93,7 +93,7 @@ elif [ 'bb' = "${PROFILE}" ]; then
   git config user.email "yusuf.kami@gmail.com"
 
 else
-  printf "Profile name provided not recognised.\n"
+  printf "Profile name provided is not recognised.\n"
   exit 1
 fi
 
