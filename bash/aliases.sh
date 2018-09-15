@@ -169,7 +169,7 @@ alias dkl="echo 'Running: docker kill'; docker kill "
 alias dlo="echo 'Running: docker logs'; docker logs "
 alias dlf="echo 'Running: docker logs --follow'; docker logs --follow "
 
-## Process magic
+## Process
 alias psa="echo 'Running: ps aux'; ps aux "
 alias psg="echo 'Running: ps aux | grep '; ps aux | grep "
 alias pan="echo 'Running get port for process'; getPort "
