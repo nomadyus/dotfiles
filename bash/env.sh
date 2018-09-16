@@ -18,7 +18,7 @@ export NEW_RELIC_ENABLED=false
 export LC_ALL=en_US.UTF-8
 export LANG="en_CA"
 
-# Colors
+# Colors for 'tmux' and prompt
 RED="$(tput setaf 1)"
 GREEN="$(tput setaf 2)"
 YELLOW="$(tput setaf 3)"

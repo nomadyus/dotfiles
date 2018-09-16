@@ -50,7 +50,7 @@ function promptCommand() {
 	    venv_prompt=" $BLUE$prompt_venv_symbol$(basename $VIRTUAL_ENV)$NOCOLOR"
 	fi
 
-  # Conda ENV
+  # Conda environment
 	local conda_prompt=
 	if [ -n "$CONDA_PREFIX" ]; then
 	    venv_prompt=" $BLUE$promot_conda_symbol$(basename $CONDA_PREFIX)$NOCOLOR"
