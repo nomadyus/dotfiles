@@ -3,7 +3,7 @@ A collection of scripts and code snippets used to set up and startup my developm
 
 ## tl;dr
 ```
- source ./dotfiles.sh; alias;
+ source ./dotfiles.sh
 ```
 
 ## Installation
@@ -17,7 +17,7 @@ In order to use `dotfiles` CLI you must first get the source and from its GitHub
 
 
 ## Setup
-Setting up the dotfiles is as easy as `source ./dotfiles.sh` in any bash environment.
+Setting up the dotfiles is as easy as `source ./dotfiles.sh` in any linux-based shell environment.
 
 
 ## Reloading
