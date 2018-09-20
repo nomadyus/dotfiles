@@ -47,11 +47,11 @@ for item in `echo *`;
     elif [ -d "$PWD/$item/.git" ]; then
       echo "'$PWD/$item' is a git directory. We can perform a 'git pull --rebase' command."
       cd $item
-      echo "Stashing any uncommited changes before pulling updates."
+      echo "Stashing any uncommited changes before pulling updates from origin."
       git stash save 'rebase-stash'
       echo "Performing 'git pull --rebase' command."
       git pull --rebase
-      echo "Using stashed changes if any is available."
+      echo "Using stashed changes if available."
       git stash apply stash^{/rebase-stash} || true
       cd ..
       echo "Rebase completed."
