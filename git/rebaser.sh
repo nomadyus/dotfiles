@@ -23,7 +23,7 @@ export GIT_REBASER="$BASE_DIR/rebaser.sh"
 [[ $1 == '--help' || $1 == 'help' ]] && { usage; }
 
 # Run script
-printf "\nRunning Git Rebaser.\n"
+printf "\nStarting Git Rebaser CLI.\n"
 
 function checkForGitDependency() {
   printf "Checking that you have Git installed.\n"
