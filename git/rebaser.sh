@@ -32,7 +32,7 @@ function checkForGitDependency() {
       printf "I need Git installed to proceed!\n"
       exit 1
   fi
-  printf "You got Git. Nice!\n"
+  printf "You have Git. Excellent!\n"
 }
 
 function checkForGitDirectory() {
