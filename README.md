@@ -30,6 +30,7 @@ Add the path of the directory for `./dotfiles.sh` file to the environment variab
 
   echo "Loading dotfiles"
   dotfiles
+  echo "Completed loading dotfiles."
 ```
 In order to reload the dotfile you can simply source the file using the path in the environment variable with the command `dotfiles`.
 Setting the `DOTFILES_DIR` environment variable also lets you set up an alias for the [Git Profile Manager](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh) by adding the following line to your `~/.bash_profile`
