@@ -56,6 +56,31 @@ function printfMultiple() {
  printf $operation $(eval echo {1..$times})
 }
 
+## Check the current child directories for a build.xml file
+## If the file is found use ant to build the project
+function buildFolderWithAnt() {
+  ## TODO: It shoudl check that we have ant installed first
+  for file in `echo *`;
+  do
+    if [ -d $file ]; then
+      echo "Checking directory for build.xml file.";
+      cd $file;
+      if [ -e "$PWD/build.xml" ]; then
+        echo "There is a build.xml file.";
+        echo "Building project \"$file\" with Ant.";
+        ant;
+      fi
+      cd ..;
+    fi
+  done;
+}
+
+## Kill all process that match name
+function killProcess() {
+  name=$1
+  ps -aux | grep "$name" | awk '{ print $2 }' | grep -o '[0-9]\+' | awk '{ system ("echo Killing process " $1 "; kill -9 " $1) }'
+}
+
 ##  Navigation
 alias b="echo 'Running: cd ~/Documents'; cd ~/Documents; pwd"
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
