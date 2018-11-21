@@ -4,6 +4,8 @@
 ## Adding color to the terminal
 ## Reference: https://github.com/sapegin/dotfiles/blob/bash/includes/bash_prompt.bash
 
+printf '\nConfiguring the terminal display.\n'
+
 # User color
 case $(id -u) in
 	0) user_color="$RED" ;;  # root
