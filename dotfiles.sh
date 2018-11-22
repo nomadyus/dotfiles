@@ -42,3 +42,6 @@ else
 fi
 
 printf "\nThe dotfiles setup is now complete.\n"
+
+printf "\nClearing the terminal.\n"
+clear; clear; clear;
