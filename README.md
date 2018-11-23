@@ -26,11 +26,11 @@ Add the path of the directory for `./dotfiles.sh` file to the environment variab
   #~/.bash_profile
   echo "Storing the dotfiles path to ~/.bash_profile"
   export DOTFILES_DIR=[PATH_TO_DOTFILES_DIR]
-  alias dotfiles="pushd $(pwd); cd $DOTFILES_DIR; source ./dotfiles.sh; popd;"
+  alias dotfiles="pushd $(pwd) > /dev/null; cd $DOTFILES_DIR; source ./dotfiles.sh; popd  > /dev/null;"
 
   echo "Loading dotfiles"
   dotfiles
-  echo "Completed loading dotfiles."
+  echo "Completed dotfiles installation. You are ready to go \"Beast Mode\"!"
 ```
 In order to reload the dotfile you can simply source the file using the path in the environment variable with the command `dotfiles`.
 Setting the `DOTFILES_DIR` environment variable also lets you set up an alias for the [Git Profile Manager](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh) by adding the following line to your `~/.bash_profile`
