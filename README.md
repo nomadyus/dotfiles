@@ -70,6 +70,7 @@ Once in a `tmux` window in order to run *special commands* you need to input the
 - navigate to previous window: `l`
 - navigate to next pane: `o`
 - navigate to previous pane: `;`
+- (un)maximize current pane: `z`
 - show description: `i`
 - show pane information: `q`
 - show and navigate all sessions: `w` or `s`
