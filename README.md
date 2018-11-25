@@ -60,6 +60,7 @@ These profiles can always be adjusted to your preferences once they are download
 #### 1.4 `tmux`
 You can also use `tmux` which is also installed within the bash setup script. This is a very useful and versatile tool for multiplexing and the script used to install it is provided [here](https://gist.github.com/simme/1297707). To start a multiplexed session just use the command `tmux`.
 Once in a `tmux` window in order to run *special commands* you need to input the *prefix* command which is **Ctrl+b**. With this prefix provided new windows or panes can be created and navigated with the following *key binding*:
+- show sessions: `s`
 - create new window: `c`
 - create new pane to left: `%`
 - create new pane to bottom: `"`
@@ -74,8 +75,8 @@ Once in a `tmux` window in order to run *special commands* you need to input the
 - show and navigate all sessions: `w` or `s`
 - change layout: `[space]`
 - cycle panes: `Ctr+o`
-- scrollback: `[Page UP/Down]`
-- search: `Ctr+s` (during scrollback)
+- scroll: `[Page UP/Down]`
+- search: `Ctr+s` (during scroll)
 - detach session: `d`
 
 To view all created windows externally from the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-server` can be used.
@@ -87,6 +88,10 @@ To view all created windows externally from the `tmux` session use the command `
 **NOTE**: In order to include the command to clear the screen using the key **Ctl+k** use the command `tmux bind -n C-k send-keys -R \; send-keys C-l \; clear-history`
 
 **NOTE**: If your shell is using a profile script other than `~/.bash_profile` make sure you source your appropriate shell profile script in `~/.bash_profile` so all new `tmux` sessions will be able to load your shell profile.
+
+**NOTE**: In order to attach to an already running session use the command `tmux a  #  (or at, or attach)` within another session;
+
+**NOTE**: In order to kill all other session apart from the currently running one use the command `tmux kill-session -a` within another session;
 
 ### 2. Git
 #### 2.1. Git Profile Manager
