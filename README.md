@@ -121,7 +121,9 @@ The hooks can be symlinked using the following commands:
 ```
 
 #### 2.4 Git History
-Sometimes there will be an *urgent* need to rewrite the history that has already been pushed to origin. This can be done with the following steps that was obtained from this **Stack Overflow [issue](https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit)**:
+##### 2.4.1 Rewrite commit
+Sometimes there will be an *urgent* need to rewrite the history that has already been pushed to origin.
+This can be done with the following steps that was obtained from this **Stack Overflow [issue](https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit)**:
 1. Checkout the commit to be updated:
 ```
   git checkout OLD_COMMIT_HASH
@@ -139,3 +141,29 @@ Sometimes there will be an *urgent* need to rewrite the history that has already
 6. Delete the old commit with `git replace -d OLD_COMMIT_HASH`
 
 7. Push the changes to origin with `git push --force-with-lease`. If there is any issue with the `push` command then you can force the update with `git push --force` instead.
+
+##### 2.4.2 Rewrite multiple commit history
+If you would like to rewrite the history of multiple commits, change the `author`, `date` etc., you can do so by using `git rebase` functionality to pick and edit the commits as provided by the **[Git Tools](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)**:
+1. Rebase the commit range that includes those to be edited
+```
+  git rebase -i HEAD~4
+```
+2. The above bring up an interactive editor and you must change the `pick` to `edit` on only the commits to be changed. Once the changes are picked save the edit.
+```
+  pick f7f3f6d changed my name a bit
+  edit 310154e updated README formatting and added blame
+  pick a5f4a0d added cat-file
+```
+3. You will get an interactive message telling you what to do to change each picked commit. The first steps is to `amend` each commit. Doing this you can pass a new `author`, `date` etc.
+```
+  git commit --amend --author="Yusuf Fadairo <yusuf.kami@gmail.com>" --date="2018-11-12: 13:14:15"
+```
+4. Then continue the `rebase` using the `continue` command
+```
+  git rebase --continue
+```
+5. This will continue for each and every commit you have picked. Once all rebase is complete you can push the changes to the **origin** using the force push command:
+```
+  git push --force
+```
+**NOTE** Be careful as this will rewrite the history in the origin which might be in pulled by other users.
