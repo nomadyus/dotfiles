@@ -146,7 +146,7 @@ This can be done with the following steps that was obtained from this **Stack Ov
 If you would like to rewrite the history of multiple commits, change the `author`, `date` etc., you can do so by using `git rebase` functionality to pick and edit the commits as provided by the **[Git Tools](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)**:
 1. Rebase the commit range that includes those to be edited
 ```
-  git rebase -i HEAD~4
+  git rebase -i HEAD~3
 ```
 2. The above bring up an interactive editor and you must change the `pick` to `edit` on only the commits to be changed. Once the changes are picked save the edit.
 ```
