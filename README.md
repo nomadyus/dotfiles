@@ -166,4 +166,4 @@ If you would like to rewrite the history of multiple commits, change the `author
 ```
   git push --force
 ```
-**NOTE** Be careful as this will rewrite the history in the origin which might be in pulled by other users.
+**NOTE** Be careful as this will rewrite the history in the origin which might be pulled by other users.
