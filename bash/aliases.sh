@@ -81,6 +81,16 @@ function killProcess() {
   ps -aux | grep "$name" | awk '{ print $2 }' | grep -o '[0-9]\+' | awk '{ system ("echo Killing process " $1 "; kill -9 " $1) }'
 }
 
+## Clean Docker images
+function dockerImageClean() {
+  docker images -a | awk '{ system(" echo \"Cleaning image: \"" $3  "; docker rmi -f " $3) }' 
+}
+
+## Clean Docker processes
+function dockerProcClean() {
+  docker ps -a | awk '{ system(" echo \"Cleaning process: \"" $1 "; docker rm -f " $1 ) }'
+}
+
 ##  Navigation
 alias b="echo 'Running: cd ~/Documents'; cd ~/Documents; pwd"
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
