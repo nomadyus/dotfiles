@@ -78,6 +78,7 @@ Once in a `tmux` window in order to run *special commands* you need to input the
 - cycle panes: `Ctr+o`
 - scroll: `[Page UP/Down]`
 - search: `Ctr+s` (during scroll)
+- create new window (separate): `:new`
 - detach session: `d`
 
 To view all created windows externally from the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-server` can be used.
@@ -167,3 +168,7 @@ If you would like to rewrite the history of multiple commits, change the `author
   git push --force
 ```
 **NOTE** Be careful as this will rewrite the history in the origin which might be pulled by other users.
+
+****
+_Started: Jan 21, 2019_  
+_Updated: Jan 21, 2019_  

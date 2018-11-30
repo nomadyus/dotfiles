@@ -92,6 +92,11 @@ elif [ 'bb' = "${PROFILE}" ]; then
   git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.kami@gmail.com"
 
+elif [ 'light' = "${PROFILE}" ]; then
+  printf "Using the 'Yusuf Fadairo' profile for an Enlighten project.\n"
+  git config user.name "Yusuf Fadairo (Enlighten)"
+  git config user.email "contact@enlighten.ai"
+
 else
   printf "Profile name provided is not recognised.\n"
   exit 1
