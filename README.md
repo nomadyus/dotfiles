@@ -157,7 +157,7 @@ If you would like to rewrite the history of multiple commits, change the `author
 ```
 3. You will get an interactive message telling you what to do to change each picked commit. The first steps is to `amend` each commit. Doing this you can pass a new `author`, `date` etc.
 ```
-  git commit --amend --author="Yusuf Fadairo <yusuf.kami@gmail.com>" --date="2018-11-12: 13:14:15"
+  git commit --amend --author="Yusuf Fadairo <yusuf.kami@gmail.com>" --date="2018-11-12 13:14:15"
 ```
 4. Then continue the `rebase` using the `continue` command
 ```
