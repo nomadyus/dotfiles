@@ -209,3 +209,9 @@ alias dlf="echo 'Running: docker logs --follow'; docker logs --follow "
 alias psa="echo 'Running: ps aux'; ps aux "
 alias psg="echo 'Running: ps aux | grep '; ps aux | grep "
 alias pan="echo 'Running get port for process'; getPort "
+
+## Applicationns
+alias mysql="docker pull mysql; docker run --name MySQL -e MYSQL_ROOT_PASSWORD=Password1 -d -v ~/Development/mount/database/mysql:/mount mysql "
+alias mysql-cli="docker exec -it MySQL /bin/bash -c \"mysql -uroot -pPassword1\" "
+alias mongod="docker pull mongo; docker run --name MongoDB -d -v ~/Development/mount/database/mongo:/mount mongo "
+alias mongo="docker exec -it MongoDB /bin/bash -c \"mongo \" "
