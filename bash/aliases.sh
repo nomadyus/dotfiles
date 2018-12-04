@@ -209,6 +209,7 @@ alias dlf="echo 'Running: docker logs --follow'; docker logs --follow "
 alias psa="echo 'Running: ps aux'; ps aux "
 alias psg="echo 'Running: ps aux | grep '; ps aux | grep "
 alias pan="echo 'Running get port for process'; getPort "
+alias ports="echo 'Running port scan'; sudo lsof -i -P -n "
 
 ## Applicationns
 alias mysql="docker pull mysql; docker run --name MySQL -e MYSQL_ROOT_PASSWORD=Password1 -d -v ~/Development/mount/database/mysql:/mount mysql "
