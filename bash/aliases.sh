@@ -212,7 +212,7 @@ alias pan="echo 'Running get port for process'; getPort "
 alias ports="echo 'Running port scan'; sudo lsof -i -P -n "
 
 ## Applicationns
-alias mysql="docker pull mysql; docker run --name MySQL -e MYSQL_ROOT_PASSWORD=Password1 -d -v ~/Development/mount/database/mysql:/mount mysql "
+alias mysql="docker pull mysql; docker run --name MySQL -p 3306:3306 -p 33060:33060 -e MYSQL_ROOT_PASSWORD=Password1 -d -v ~/Development/mount/database/mysql:/mount mysql "
 alias mysql-cli="docker exec -it MySQL /bin/bash -c \"mysql -uroot -pPassword1\" "
-alias mongod="docker pull mongo; docker run --name MongoDB -d -v ~/Development/mount/database/mongo:/mount mongo "
+alias mongod="docker pull mongo; docker run --name MongoDB -p 27017:27017 -d -v ~/Development/mount/database/mongo:/mount mongo "
 alias mongo="docker exec -it MongoDB /bin/bash -c \"mongo \" "
