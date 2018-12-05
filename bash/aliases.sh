@@ -216,3 +216,5 @@ alias mysql="docker pull mysql; docker run --name MySQL -p 3306:3306 -p 33060:33
 alias mysql-cli="docker exec -it MySQL /bin/bash -c \"mysql -uroot -pPassword1\" "
 alias mongod="docker pull mongo; docker run --name MongoDB -p 27017:27017 -d -v ~/Development/mount/database/mongo:/mount mongo "
 alias mongo="docker exec -it MongoDB /bin/bash -c \"mongo \" "
+alias mssql="docker run --name MSSQL -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d -v ~/Development/mount/database/sqlserver:/mount mcr.microsoft.com/mssql/server   "
+alias mssql-cli="docker exec -it MSSQL /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P yourStrong(!)Password "
