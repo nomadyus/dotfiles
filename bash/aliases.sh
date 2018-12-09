@@ -218,5 +218,6 @@ alias mongod="docker pull mongo; docker run --name MongoDB -p 27017:27017 -d -v 
 alias mongo="docker exec -it MongoDB /bin/bash -c \"mongo \" "
 alias sqlserver="docker run --name SQLServer -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password1' -p 1433:1433 -d -v ~/Development/mount/database/sqlserver:/mount mcr.microsoft.com/mssql/server   "
 alias sql="docker exec -it SQLServer /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Password1 "
-
+alias oracle="docker pull store/oracle/database-enterprise:12.2.0.1; docker run --name OracleDB -p 1521:1521 -d -v ~/Developement/mount/database/oracle:/mount store/oracle/database-enterprise:12.2.0.1; "
+alias orcl="docker exec -it OracleDB /bin/bash -c \"source /home/oracle/.bashrc; sqlplus /nolog \" "
 
