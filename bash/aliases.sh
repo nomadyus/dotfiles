@@ -83,7 +83,7 @@ function killProcess() {
 
 ## Clean Docker images
 function dockerImageClean() {
-  docker images -a | awk '{ system(" echo \"Cleaning image: \"" $3  "; docker rmi -f " $3) }' 
+  docker images -a | awk '{ system(" echo \"Cleaning image: \"" $3  "; docker rmi -f " $3) }'
 }
 
 ## Clean Docker processes
