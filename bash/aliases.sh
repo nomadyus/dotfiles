@@ -212,7 +212,7 @@ alias psg="echo 'Running: ps aux | grep '; ps aux | grep "
 alias pan="echo 'Running get port for process'; getPort "
 alias prt="echo 'Running port scan'; sudo lsof -i -P -n "
 
-## Applications
+## Application Databases
 alias mysql="docker pull mysql; docker run --name MySQL -p 3306:3306 -p 33060:33060 -e MYSQL_ROOT_PASSWORD=Password1 -d -v ~/Development/mount/database/mysql:/mount mysql "
 alias mysql-cli="docker exec -it MySQL /bin/bash -c \"mysql -uroot -pPassword1\" "
 alias mongod="docker pull mongo; docker run --name MongoDB -p 27017:27017 -d -v ~/Development/mount/database/mongo:/mount mongo "
@@ -221,4 +221,6 @@ alias sqlserver="docker run --name SQLServer -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=
 alias sql="docker exec -it SQLServer /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Password1 "
 alias oracle="docker pull store/oracle/database-enterprise:12.2.0.1; docker run --name OracleDB -p 1521:1521 -d -v ~/Developement/mount/database/oracle:/mount store/oracle/database-enterprise:12.2.0.1; "
 alias orcl="docker exec -it OracleDB /bin/bash -c \"source /home/oracle/.bashrc; sqlplus /nolog \" "
+alias postgres="docker pull postgres; docker run --name PostgreSQL -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d -v ~/Developement/mount/database/postgres:/mount postgres "
+alias psql="docker exec -it PostgreSQL psql -U postgres "
 
