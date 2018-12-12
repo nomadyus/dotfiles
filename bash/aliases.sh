@@ -191,6 +191,7 @@ alias siz="echo 'Printing directory size'; du -sh "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
+alias dip="echo 'Running: docker image prune'; docker image prune --all --force"
 alias dia="echo 'Running: docker images'; docker images -a"
 alias dps="echo 'Running: docker ps'; docker ps"
 alias dpa="echo 'Running: docker ps'; docker ps -a"
