@@ -96,6 +96,8 @@ elif [ 'gl' = "${PROFILE}" ]; then
   printf "Using the 'Yusuf Fadairo' GitLab profile.\n"
   git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.kami@gmail.com"
+  git config user.signingkey 92A1AFEB8FF68EFA
+  git config commit.gpgsign true
 
 elif [ 'light' = "${PROFILE}" ]; then
   printf "Using the 'Yusuf Fadairo' profile for an Enlighten project.\n"
