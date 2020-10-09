@@ -121,9 +121,37 @@ function installTmux() {
   fi
 }
 
+function installUtils() {
+  if ! which tmux &> /dev/null
+    then
+      printf "Installing some utilities with `brew`.\n"
+      # Install 'watch' to continuously check results of a command
+      printf "We are installing 'watch'!\n"
+      brew install watch
+      # Install 'htop' for resource monitoring
+      printf "We are installing 'htop'!\n"
+      brew install htop
+      # Install 'wget' for ftp or http data download
+      printf "We are installing 'wget'!\n"
+      brew install wget
+      # Install 'nmap' for network security
+      printf "We are installing 'nmap'!\n"
+      brew install nmap
+      # Install 'links' for command line browsing
+      printf "We are installing 'links'!\n"
+      brew install links
+      # Install 'geoip' for geolocation lookup
+      printf "We are installing 'geoip'!\n"
+      brew install geoip
+  fi
+}
+
 # Show awesome prompt only if Git is istalled
 command -v git >/dev/null 2>&1 && PROMPT_COMMAND=promptCommand
 
 # Install beatiful tmux
 # Reference: https://gist.github.com/simme/1297707
 installTmux
+
+# Install some utilities
+installUtils
