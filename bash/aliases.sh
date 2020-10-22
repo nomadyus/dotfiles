@@ -222,6 +222,6 @@ alias sqlserver="docker run --name SQLServer -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=
 alias sql="docker exec -it SQLServer /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Password1 "
 alias oracle="docker pull store/oracle/database-enterprise:12.2.0.1; docker run --name OracleDB -p 1521:1521 -d -v ~/Development/mount/database/oracle:/mount store/oracle/database-enterprise:12.2.0.1; "
 alias orcl="docker exec -it OracleDB /bin/bash -c \"source /home/oracle/.bashrc; sqlplus /nolog \" "
-alias postgres="docker pull postgres; docker run --name PostgreSQL -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d -v ~/Developement/mount/database/postgres:/mount postgres "
+alias postgres="docker pull postgres; docker run --name PostgreSQL -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d -v ~/Development/mount/database/postgres:/mount postgres "
 alias psql="docker exec -it PostgreSQL psql -U postgres "
 
