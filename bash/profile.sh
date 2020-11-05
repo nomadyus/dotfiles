@@ -147,23 +147,53 @@ function installUtils() {
 
   printf "Installing some utilities with 'brew'.\n"
   # Install 'watch' to continuously check results of a command
-  printf "We are installing 'watch'!\n"
-  brew install watch
+  if ! which brew &> /dev/null
+    then
+      printf "We are installing 'watch'!\n"
+      brew install watch
+    else
+      printf "You already have 'watch' installed!\n"
+  fi
   # Install 'htop' for resource monitoring
-  printf "We are installing 'htop'!\n"
-  brew install htop
+  if ! which brew &> /dev/null
+    then
+      printf "We are installing 'htop'!\n"
+      brew install htop
+    else
+      printf "You already have 'htop' installed!\n"
+  fi
   # Install 'wget' for ftp or http data download
-  printf "We are installing 'wget'!\n"
-  brew install wget
+  if ! which brew &> /dev/null
+    then
+      printf "We are installing 'wget'!\n"
+      brew install wget
+    else
+      printf "You already have 'wget' installed!\n"
+  fi
   # Install 'nmap' for network security
-  printf "We are installing 'nmap'!\n"
-  brew install nmap
+  if ! which brew &> /dev/null
+    then
+      printf "We are installing 'nmap'!\n"
+      brew install nmap
+    else
+      printf "You already have 'nmap' installed!\n"
+  fi
   # Install 'links' for command line browsing
-  printf "We are installing 'links'!\n"
-  brew install links
+  if ! which brew &> /dev/null
+    then
+      printf "We are installing 'links'!\n"
+      brew install links
+    else
+      printf "You already have 'links' installed!\n"
+  fi
   # Install 'geoip' for geolocation lookup
-  printf "We are installing 'geoip'!\n"
-  brew install geoip
+  if ! which brew &> /dev/null
+    then
+      printf "We are installing 'geoip'!\n"
+      brew install geoip
+    else
+      printf "You already have 'geoip' installed!\n"
+  fi
 
 }
 
