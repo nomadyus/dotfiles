@@ -26,7 +26,7 @@ Add the path of the directory for `./dotfiles.sh` file to the environment variab
   #~/.bash_profile
   echo "Storing the dotfiles path to ~/.bash_profile"
   export DOTFILES_DIR=[PATH_TO_DOTFILES_DIR]
-  alias dotfiles="pushd $(pwd) > /dev/null; cd $DOTFILES_DIR; source ./dotfiles.sh; popd  > /dev/null;"
+  alias dotfiles="pushd '$(pwd)' > /dev/null; cd $DOTFILES_DIR; source ./dotfiles.sh; popd  > /dev/null;"
 
   echo "Loading dotfiles"
   dotfiles
