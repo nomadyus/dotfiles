@@ -17,7 +17,7 @@ prompt_symbol="-❥"
 prompt_clean_symbol="✿ "
 prompt_dirty_symbol="☂ "
 prompt_venv_symbol="☁ "
-promot_conda_symbol="🐍  "
+prompt_conda_symbol="🐍  "
 
 function promptCommand() {
 	# Local or SSH session?
@@ -55,7 +55,7 @@ function promptCommand() {
   # Conda environment
 	local conda_prompt=
 	if [ -n "$CONDA_PREFIX" ]; then
-	    venv_prompt=" $BLUE$promot_conda_symbol$(basename $CONDA_PREFIX)$NOCOLOR"
+	    venv_prompt=" $BLUE$prompt_conda_symbol$(basename $CONDA_PREFIX)$NOCOLOR"
 	fi
 
 	# Only show username if not default
@@ -146,8 +146,16 @@ function installUtils() {
   fi
 
   printf "Installing some utilities with 'brew'.\n"
+  # Install 'conda' to enable working with Python environments
+  if ! which conda &> /dev/null
+    then
+      printf "We are installing 'conda'!\n"
+      brew brew install --cask miniconda
+    else
+      printf "You already have 'conda' installed!\n"
+  fi
   # Install 'watch' to continuously check results of a command
-  if ! which brew &> /dev/null
+  if ! which watch &> /dev/null
     then
       printf "We are installing 'watch'!\n"
       brew install watch
@@ -155,7 +163,7 @@ function installUtils() {
       printf "You already have 'watch' installed!\n"
   fi
   # Install 'htop' for resource monitoring
-  if ! which brew &> /dev/null
+  if ! which htop &> /dev/null
     then
       printf "We are installing 'htop'!\n"
       brew install htop
@@ -163,7 +171,7 @@ function installUtils() {
       printf "You already have 'htop' installed!\n"
   fi
   # Install 'wget' for ftp or http data download
-  if ! which brew &> /dev/null
+  if ! which wget &> /dev/null
     then
       printf "We are installing 'wget'!\n"
       brew install wget
@@ -171,7 +179,7 @@ function installUtils() {
       printf "You already have 'wget' installed!\n"
   fi
   # Install 'nmap' for network security
-  if ! which brew &> /dev/null
+  if ! which nmap &> /dev/null
     then
       printf "We are installing 'nmap'!\n"
       brew install nmap
@@ -179,7 +187,7 @@ function installUtils() {
       printf "You already have 'nmap' installed!\n"
   fi
   # Install 'links' for command line browsing
-  if ! which brew &> /dev/null
+  if ! which links &> /dev/null
     then
       printf "We are installing 'links'!\n"
       brew install links
@@ -187,7 +195,7 @@ function installUtils() {
       printf "You already have 'links' installed!\n"
   fi
   # Install 'geoip' for geolocation lookup
-  if ! which brew &> /dev/null
+  if ! which geoip &> /dev/null
     then
       printf "We are installing 'geoip'!\n"
       brew install geoip
