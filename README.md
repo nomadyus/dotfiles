@@ -80,10 +80,11 @@ Once in a `tmux` window in order to run *special commands* you need to input the
 - search: `Ctr+s` (during scroll)
 - create new window (separate): `:new`
 - detach session: `d`
+- enter command mode: `:`
 
 To view all created windows externally from the `tmux` session use the command `tmux ls`. In order to kill a window the command `tmux kill-window -t {WINDOW_ID}` is used. In order to kill all windows the command `tmux kill-server` can be used.
 
-**NOTE**: To log into an ongoing session that was detached, use the command `tmux a`
+**NOTE**: To log into an ongoing session that was detached, use the command `tmux #` (or `tmux at #`, or `tmux attach #`) within another session;
 
 **NOTE**: To view all possible *key bindings* use the command `tmux list-keys`.
 
@@ -91,9 +92,9 @@ To view all created windows externally from the `tmux` session use the command `
 
 **NOTE**: If your shell is using a profile script other than `~/.bash_profile` make sure you source your appropriate shell profile script in `~/.bash_profile` so all new `tmux` sessions will be able to load your shell profile.
 
-**NOTE**: In order to attach to an already running session use the command `tmux a  #  (or at, or attach)` within another session;
-
 **NOTE**: In order to kill all other session apart from the currently running one use the command `tmux kill-session -a` within another session;
+
+**NOTE**: In `command mode` you can clear the screen by providing the `clear` command;
 
 ### 2. Git
 #### 2.1. Git Profile Manager
