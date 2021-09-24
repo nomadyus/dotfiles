@@ -195,12 +195,12 @@ function installUtils() {
       printf "You already have 'links' installed!\n"
   fi
   # Install 'geoip' for geolocation lookup
-  if ! which geoip &> /dev/null
+  if ! which geoiplookup &> /dev/null
     then
       printf "We are installing 'geoip'!\n"
       brew install geoip
     else
-      printf "You already have 'geoip' installed!\n"
+      printf "You already have 'geoip' ('geoiplookup') installed!\n"
   fi
 
 }
