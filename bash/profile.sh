@@ -202,6 +202,30 @@ function installUtils() {
     else
       printf "You already have 'geoip' ('geoiplookup') installed!\n"
   fi
+  # Install 'firebase' for firebase CLI
+  if ! which geoiplookup &> /dev/null
+    then
+      printf "We are installing 'firebase'!\n"
+      curl -sL https://firebase.tools | bash
+    else
+      printf "You already have 'firebase' installed!\n"
+  fi
+  # Install 'aws' for AWS CLI
+  if ! which geoiplookup &> /dev/null
+    then
+      printf "You need to install 'aws'!\n"
+      open https://aws.amazon.com/cli/
+    else
+      printf "You already have 'aws' installed!\n"
+  fi
+  # Install 'gcloud' for Google Cloud CLI
+  if ! which geoiplookup &> /dev/null
+    then
+      printf "You need to install 'gcloud'!\n"
+      open https://cloud.google.com/sdk/docs/install
+    else
+      printf "You already have 'gcloud' installed!\n"
+  fi
 
 }
 
