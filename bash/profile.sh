@@ -226,6 +226,14 @@ function installUtils() {
     else
       printf "You already have 'gcloud' installed!\n"
   fi
+  # Install 'sbt' for Scala Building and Packaging
+  if ! which sbt &> /dev/null
+    then
+      printf "You need to install 'sbt'!\n"
+      brew install sbt
+    else
+      printf "You already have 'sbt' installed!\n"
+  fi
 
 }
 
