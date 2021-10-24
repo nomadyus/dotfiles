@@ -190,6 +190,7 @@ alias tac="echo 'Running: tar -zcvf'; tar -zcvf "
 alias tuc="echo 'Running: tar -zxvf'; tar -zxvf "
 alias kil="echo 'Running: kill -9'; kill -9 "
 alias siz="echo 'Printing directory size'; du -sh "
+alias cpd="echo 'Copying directory'; cp -r -f "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
