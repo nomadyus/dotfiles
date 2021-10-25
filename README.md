@@ -90,6 +90,10 @@ To view all created windows externally from the `tmux` session use the command `
 
 **NOTE**: In order to include the command to clear the screen using the key **Ctl+k** use the command `tmux bind -n C-k send-keys -R \; send-keys C-l \; clear-history`
 
+**NOTE**: To make sure new windows go to a particular directory use the following binding command `tmux bind c new-window -c "~/Development"`
+
+**NOTE**: To make sure new panes uses the same directory path as last active pane use the following binding command `tmux bind % split-window -c "#{pane_current_path}"`
+
 **NOTE**: If your shell is using a profile script other than `~/.bash_profile` make sure you source your appropriate shell profile script in `~/.bash_profile` so all new `tmux` sessions will be able to load your shell profile.
 
 **NOTE**: In order to kill all other session apart from the currently running one use the command `tmux kill-session -a` within another session;
