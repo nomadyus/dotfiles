@@ -136,6 +136,15 @@ function installTools() {
   else
     printf "You already have 'vault' installed!\n"
   fi
+
+  if ! which clj &> /dev/null
+    then
+      printf "The 'clj' runtime is not installed.\n"
+      printf "We are installing 'clojure'!\n"
+      brew install vault
+  else
+    printf "You already have 'clj' installed!\n"
+  fi
 }
 
 function installUtils() {
