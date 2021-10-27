@@ -145,6 +145,15 @@ function installTools() {
   else
     printf "You already have 'clj' installed!\n"
   fi
+
+  if ! which lein &> /dev/null
+    then
+      printf "The 'lein' runtime is not installed.\n"
+      printf "We are installing 'lein' via 'leiningen'!\n"
+      brew install leiningen
+  else
+    printf "You already have 'lein' installed!\n"
+  fi
 }
 
 function installUtils() {
