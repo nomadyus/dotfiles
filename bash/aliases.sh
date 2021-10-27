@@ -226,4 +226,5 @@ alias oracle="docker pull store/oracle/database-enterprise:12.2.0.1; docker run 
 alias orcl="docker exec -it OracleDB /bin/bash -c \"source /home/oracle/.bashrc; sqlplus /nolog \" "
 alias postgres="docker pull postgres; docker run --name PostgreSQL -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d -v ~/Development/mount/database/postgres:/mount postgres "
 alias psql="docker exec -it PostgreSQL psql -U postgres "
+alias dynamo="echo 'Running dynamo locally on port 8000'; docker run -p 8000:8000 amazon/dynamodb-local "
 
