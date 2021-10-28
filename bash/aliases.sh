@@ -91,6 +91,43 @@ function dockerProcClean() {
   docker ps -a | awk '{ system(" echo \"Cleaning process: \"" $1 "; docker rm -f " $1 ) }'
 }
 
+function parse_creds() {
+  local creds=$1
+  local attribute=.Credentials.$2
+
+  echo $creds | jq $attribute | tr -d '"'
+}
+
+## Get AWS credentials with MFA token and set to environment variable
+function refreshAwsMfa() {
+  if [[ "$1" == "" || "$2" == ""  ]]; then
+    echo 'Usage: mfa [AWS-PROFILE] [MFA TOKEN CODE]'
+    return
+  fi
+
+  local profile=$1
+  local mfa=$2
+
+  creds=$(aws sts get-session-token --serial-number $MFA_DEVICE_ARN --token-code $mfa --profile $profile)
+  if [[ -n "$creds" ]]; then
+    echo 'Parsing cedentials...'
+    local AWS_ACCESS_KEY_ID=$(parse_creds "$creds" "AccessKeyId")
+    local AWS_SECRET_ACCESS_KEY=$(parse_creds "$creds" "SecretAccessKey")
+    local AWS_SESSION_TOKEN=$(parse_creds "$creds" "SessionToken")
+    if [[ -n "$AWS_ACCESS_KEY_ID" ]]; then
+        export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+        export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+        export AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN
+        echo 'AWS credentials exported to following environment variables: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN'
+        echo "Copy the following into ~/.aws/credentials for the AWS profile $profile-mfa"
+        echo aws_access_key_id=$AWS_ACCESS_KEY_ID
+        echo aws_secret_access_key=$AWS_SECRET_ACCESS_KEY
+        echo aws_session_token=$AWS_SESSION_TOKEN
+    fi
+  fi
+}
+
+
 ##  Navigation
 alias b="echo 'Running: cd ~/Documents'; cd ~/Documents; pwd"
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
@@ -191,6 +228,7 @@ alias tuc="echo 'Running: tar -zxvf'; tar -zxvf "
 alias kil="echo 'Running: kill -9'; kill -9 "
 alias siz="echo 'Printing directory size'; du -sh "
 alias cpd="echo 'Copying directory'; cp -r -f "
+alias mfa="echo 'Fetching AWS Credentials with MFA'; refreshAwsMfa "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
