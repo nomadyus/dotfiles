@@ -110,7 +110,7 @@ function refreshAwsMfa() {
 
   creds=$(aws sts get-session-token --serial-number $MFA_DEVICE_ARN --token-code $mfa --profile $profile)
   if [[ -n "$creds" ]]; then
-    echo 'Parsing cedentials...'
+    echo 'Parsing cedentials for profile '$profile'...'
     local AWS_ACCESS_KEY_ID=$(parse_creds "$creds" "AccessKeyId")
     local AWS_SECRET_ACCESS_KEY=$(parse_creds "$creds" "SecretAccessKey")
     local AWS_SESSION_TOKEN=$(parse_creds "$creds" "SessionToken")
@@ -119,7 +119,7 @@ function refreshAwsMfa() {
         export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
         export AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN
         echo 'AWS credentials exported to following environment variables: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN'
-        echo "Copy the following into ~/.aws/credentials for the AWS profile $profile-mfa"
+        echo "Copy the following into '~/.aws/credentials' for the AWS profile '$profile-mfa'"
         echo aws_access_key_id=$AWS_ACCESS_KEY_ID
         echo aws_secret_access_key=$AWS_SECRET_ACCESS_KEY
         echo aws_session_token=$AWS_SESSION_TOKEN
@@ -228,7 +228,7 @@ alias tuc="echo 'Running: tar -zxvf'; tar -zxvf "
 alias kil="echo 'Running: kill -9'; kill -9 "
 alias siz="echo 'Printing directory size'; du -sh "
 alias cpd="echo 'Copying directory'; cp -r -f "
-alias mfa="echo 'Fetching AWS Credentials with MFA'; refreshAwsMfa "
+alias mfa="refreshAwsMfa "
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
