@@ -119,6 +119,11 @@ function installTmux() {
   else
     printf "You already have 'tmux' installed!\n"
   fi
+
+  # Setup Tmux key bindings
+  printf "Setting up tmux key bindings!\n"
+  tmux bind -n C-k send-keys -R \; send-keys C-l \; clear-history
+  tmux bind % split-window -c "#{pane_current_path}"
 }
 
 function installTools() {
