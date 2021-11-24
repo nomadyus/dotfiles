@@ -145,6 +145,8 @@ function installTools() {
   if ! which tfenv &> /dev/null
     then
       printf "The CLI for 'tfenv' is not installed.\n"
+      printf "First unlinking installed 'terraform' versions before installing 'tfenv'!\n"
+      brew unlink terraform
       printf "We are installing 'tfenv' for managing 'terraform' versions!\n"
       brew install tfenv
   else
