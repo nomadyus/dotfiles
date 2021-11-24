@@ -142,6 +142,15 @@ function installTools() {
     printf "You already have 'vault' installed!\n"
   fi
 
+  if ! which tfenv &> /dev/null
+    then
+      printf "The CLI for 'tfenv' is not installed.\n"
+      printf "We are installing 'tfenv' for managing 'terraform' versions!\n"
+      brew install tfenv
+  else
+    printf "You already have 'vault' installed!\n"
+  fi
+
   if ! which clj &> /dev/null
     then
       printf "The 'clj' runtime is not installed.\n"
