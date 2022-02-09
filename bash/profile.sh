@@ -170,6 +170,24 @@ function installTools() {
   else
     printf "You already have 'lein' installed!\n"
   fi
+
+  # Install 'conda' to enable working with Python environments
+  if ! which conda &> /dev/null
+    then
+      printf "We are installing 'conda'!\n"
+      brew brew install --cask miniconda
+    else
+      printf "You already have 'conda' installed!\n"
+  fi
+
+  # Install 'travis' to enable project build and CI
+  if ! which travis &> /dev/null
+    then
+      printf "We are installing 'travis'!\n"
+      brew install travis
+    else
+      printf "You already have 'travis' installed!\n"
+  fi
 }
 
 function installUtils() {
@@ -180,14 +198,6 @@ function installUtils() {
   fi
 
   printf "Installing some utilities with 'brew'.\n"
-  # Install 'conda' to enable working with Python environments
-  if ! which conda &> /dev/null
-    then
-      printf "We are installing 'conda'!\n"
-      brew brew install --cask miniconda
-    else
-      printf "You already have 'conda' installed!\n"
-  fi
   # Install 'watch' to continuously check results of a command
   if ! which watch &> /dev/null
     then
