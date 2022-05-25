@@ -157,7 +157,7 @@ function installTools() {
     then
       printf "The 'clj' runtime is not installed.\n"
       printf "We are installing 'clojure'!\n"
-      brew install vault
+      brew install clj
   else
     printf "You already have 'clj' installed!\n"
   fi
