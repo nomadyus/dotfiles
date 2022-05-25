@@ -175,7 +175,7 @@ function installTools() {
   if ! which conda &> /dev/null
     then
       printf "We are installing 'conda'!\n"
-      brew brew install --cask miniconda
+      brew install --cask miniconda
     else
       printf "You already have 'conda' installed!\n"
   fi
