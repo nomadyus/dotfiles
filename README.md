@@ -21,7 +21,7 @@ Setting up the dotfiles is as easy as `source ./dotfiles.sh` in any linux-based 
 
 
 ## Reloading
-Add the path of the directory for `./dotfiles.sh` file to the environment variables `DOTFILES_DIR` and add the following lines to your shell profile script (for `bash`: either `~/.profile` on Debian/Ubuntu or `~/.bash_profile` on CentOS/Fedora/RedHat or `~/.bashrc` on other Linux systems; for `zshell`: either `~/.zshrc` or `~/.zprofile`)
+Add the path of the directory for `./dotfiles.sh` file to the environment variables `DOTFILES_DIR` and add the following lines to your shell profile script (for `bash`: either `~/.profile` on Debian/Ubuntu or `~/.bash_profile` on CentOS/Fedora/RedHat or `~/.bashrc` on other Linux systems; for `zshell` use `~/.zshrc`)
 ```
   #~/.bash_profile
   echo "Storing the dotfiles path to ~/.bash_profile"

@@ -283,6 +283,7 @@ function installUtils() {
 
 # Show awesome prompt only if Git is istalled
 command -v git >/dev/null 2>&1 && PROMPT_COMMAND=promptCommand
+command -v git >/dev/null 2>&1 && PROMPT='%B%F{green}%n%F{nocolor}%b:%~ %F{cyan}%B-❥%b%F{nocolor} '
 
 # Install beatiful tmux
 # Reference: https://gist.github.com/simme/1297707
