@@ -14,7 +14,7 @@ function usage {
   echo "Git Profile Manager"
   echo "description: given a Git profile (GitHub, Bitbucket, etc.) it updates the git config parameters appropriately."
   echo "usage: $programName [profile]"
-  echo "  [profile] the name of the profile to be used. One from 'telus', 'kami', 'bb' or 'gl'."
+  echo "  [profile] the name of the profile to be used. One from 'telus', 'telus-digital', 'kami', 'bb' or 'gl'."
   exit 1
 }
 
@@ -73,13 +73,18 @@ printf "Preparing to manage you Git profiles.\n"
 
 REMOTE_ORIGIN=$(git config remote.origin.url)
 
-if [ 'telus' = "${PROFILE}" ]; then
+if [ 'telus-digital' = "${PROFILE}" ]; then
   printf "Using the 'Telus Digital' Git profile.\n"
   git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.fadairo@telus.com"
   REMOTE_ORIGIN=${REMOTE_ORIGIN/@github./@telus.github.}
   printf "\nRemote Origin ${REMOTE_ORIGIN}\n"
 
+elif [ 'telus' = "${PROFILE}" ]; then
+  printf "Using the 'Telus' Git profile.\n"
+  git config user.name "Yusuf Fadairo"
+  git config user.email "yusuf.fadairo@telus.com"
+  REMOTE_ORIGIN=${REMOTE_ORIGIN/@telus.github./@github.}
 
 elif [ 'kami' = "${PROFILE}" ]; then
   printf "Using the 'Yusuf Fadairo' Git profile.\n"
