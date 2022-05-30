@@ -133,6 +133,15 @@ function installTools() {
       exit 1
   fi
 
+  if [ ! -d ~/.nvm ];
+    then
+      printf "The CLI for 'nvm' is not installed.\n"
+      printf "We are installing 'nvm'!\n"
+      brew install nvm
+  else
+    printf "You already have 'nvm' installed!\n"
+  fi
+
   if ! which vault &> /dev/null
     then
       printf "The CLI for 'vault' is not installed.\n"
