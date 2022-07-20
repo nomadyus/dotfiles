@@ -18,6 +18,13 @@ function getPort() {
   lsof -Pan -p $1 -i
 }
 
+## Get the PID of TCP process running on the port.
+function getPid() {
+  echo "Get PID of TCP process serving on the port '$1'."
+  echo "Running sudo lsof -i tcp:$1"
+  lsof -i tcp:$1
+}
+
 ## Build a directory structure using the output of the find command.
 function unfind() {
 	while read -r item;
@@ -254,6 +261,7 @@ alias psa="echo 'Running: ps aux'; ps aux "
 alias psg="echo 'Running: ps aux | grep '; ps aux | grep "
 alias pan="echo 'Running get port for process'; getPort "
 alias prt="echo 'Running port scan'; sudo lsof -i -P -n "
+alias pid="echo 'Running get PID for port'; getPid "
 
 ## Application Databases
 alias mysql="docker pull mysql; docker run --name MySQL -p 3306:3306 -p 33060:33060 -e MYSQL_ROOT_PASSWORD=Password1 -d -v ~/Development/mount/database/mysql:/mount mysql "
