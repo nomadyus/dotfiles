@@ -18,7 +18,7 @@ function getPort() {
   lsof -Pan -p $1 -i
 }
 
-## Get the PID of TCP process running on the port.
+## Get the PID of TCP process running on a port.
 function getPid() {
   echo "Get PID of TCP process serving on the port '$1'."
   echo "Running sudo lsof -i tcp:$1"
@@ -255,6 +255,7 @@ alias drn="echo 'Running: docker run'; docker run "
 alias dkl="echo 'Running: docker kill'; docker kill "
 alias dlo="echo 'Running: docker logs'; docker logs "
 alias dlf="echo 'Running: docker logs --follow'; docker logs --follow "
+alias dex="echo 'Running: docker exec -it '; docker exec -it "
 
 ## Process
 alias psa="echo 'Running: ps aux'; ps aux "
