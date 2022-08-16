@@ -258,7 +258,7 @@ alias dlo="echo 'Running: docker logs'; docker logs "
 alias dlf="echo 'Running: docker logs --follow'; docker logs --follow "
 alias dex="echo 'Running: docker exec -it '; docker exec -it "
 alias dcl="echo 'Running: docker-compose logs '; docker-compose logs "
-alias dex="echo 'Running: docker stats '; docker stats "
+alias dst="echo 'Running: docker stats '; docker stats "
 
 ## Process
 alias psa="echo 'Running: ps aux'; ps aux "
