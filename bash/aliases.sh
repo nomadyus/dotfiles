@@ -134,7 +134,6 @@ function refreshAwsMfa() {
   fi
 }
 
-
 ##  Navigation
 alias b="echo 'Running: cd ~/Documents'; cd ~/Documents; pwd"
 alias d="echo 'Running: cd ~/Development'; cd ~/Development; pwd"
@@ -268,8 +267,6 @@ alias prt="echo 'Running port scan'; sudo lsof -i -P -n "
 alias pid="echo 'Running get PID for port'; getPid "
 
 ## Application Databases
-alias mysql="docker pull mysql; docker run --name MySQL -p 3306:3306 -p 33060:33060 -e MYSQL_ROOT_PASSWORD=Password1 -d -v ~/Development/mount/database/mysql:/mount mysql "
-alias mysql-cli="docker exec -it MySQL /bin/bash -c \"mysql -uroot -pPassword1\" "
 alias mongod="docker pull mongo; docker run --name MongoDB -p 27017:27017 -d -v ~/Development/mount/database/mongo:/mount mongo "
 alias mongo="docker exec -it MongoDB /bin/bash -c \"mongo \" "
 alias sqlserver="docker run --name SQLServer -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password1' -p 1433:1433 -d -v ~/Development/mount/database/sqlserver:/mount mcr.microsoft.com/mssql/server "
@@ -279,4 +276,6 @@ alias orcl="docker exec -it OracleDB /bin/bash -c \"source /home/oracle/.bashrc;
 alias postgres="docker pull postgres; docker run --name PostgreSQL -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d -v ~/Development/mount/database/postgres:/mount postgres "
 alias psql="docker exec -it PostgreSQL psql -U postgres "
 alias dynamo="echo 'Running dynamo locally on port 8000'; docker run -d -p 8000:8000 amazon/dynamodb-local "
-
+alias redis-server="docker pull redis;  docker run --name redis-server -d redis"
+alias redis-cli="docker run -it --rm redis redis-cli -h redis-server"
+alias rabbitmq="docker pull rabbitmq; docker run -d --hostname rabbitmq-server --name rabbitmq-server rabbitmq:3"
