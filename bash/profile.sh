@@ -197,6 +197,18 @@ function installTools() {
     else
       printf "You already have 'travis' installed!\n"
   fi
+
+  # Install 'mysql' to enable project build and CI
+  if ! which mysql &> /dev/null
+    then
+      printf "We are installing 'mysql'!\n"
+      brew uninstall mysql-connector-c++
+      brew uninstall mysql-client
+      brew install mysql
+      brew link mysql
+    else
+      printf "You already have 'mysql' installed!\n"
+  fi
 }
 
 function installUtils() {
