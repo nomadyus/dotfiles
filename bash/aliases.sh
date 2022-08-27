@@ -82,6 +82,18 @@ function buildFolderWithAnt() {
   done;
 }
 
+# Setup Rabbut MQ server using dokcer
+function setupRabbitMqServer() {
+    echo 'Pulling Rabbit MQ image'
+    docker pull rabbitmq
+    echo 'Running Rabbit MQ server'
+    docker run -d --hostname rabbitmq-hostname --name rabbitmq-server -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 15672:15672 rabbitmq
+    echo 'Enabling Rabbit MQ UI services'
+    sleep 5
+    docker exec rabbitmqctl set_user_tags guest management
+    docker exec rabbitmq-server rabbitmq-plugins enable rabbitmq_federation_management rabbitmq_management rabbitmq_mqtt rabbitmq_stomp
+}
+
 ## Kill all process that match name
 function killProcess() {
   name=$1
@@ -279,4 +291,4 @@ alias dynamo="echo 'Running dynamo locally on port 8000'; docker run -d -p 8000:
 alias redis-server="docker pull redis; docker run --name redis-server -v ~/Development/mount/redis:/data -p 6379:6379 -d redis redis-server --save 60 1 --loglevel warning"
 alias redis-host="docker exec redis-server hostname -I"
 alias redis-cli="docker run -it --rm redis redis-cli -h \$(redis-host)"
-alias rabbitmq="docker pull rabbitmq; docker run -d --hostname rabbitmq-server --name rabbitmq-server rabbitmq:3"
+alias rabbitmq="echo 'Starting Rabbit MQ Server using Docker'; setupRabbitMqServer"
