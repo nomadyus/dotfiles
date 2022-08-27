@@ -22,6 +22,7 @@ Setting up the dotfiles is as easy as `source ./dotfiles.sh` in any linux-based 
 
 ## Reloading
 Add the path of the directory for `./dotfiles.sh` file to the environment variables `DOTFILES_DIR` and add the following lines to your shell profile script (for `bash`: either `~/.profile` on Debian/Ubuntu or `~/.bash_profile` on CentOS/Fedora/RedHat or `~/.bashrc` on other Linux systems; for `zshell` use `~/.zshrc`)
+
 ```
   #~/.bash_profile
   echo "Storing the dotfiles path to ~/.bash_profile"
@@ -32,10 +33,12 @@ Add the path of the directory for `./dotfiles.sh` file to the environment variab
   dotfiles
   echo "Completed dotfiles installation. You are ready to go \"Beast Mode\"!"
 ```
+
 In order to reload the dotfile you can simply source the file using the path in the environment variable with the command `dotfiles`.
 Setting the `DOTFILES_DIR` environment variable also lets you set up an alias for the [Git Profile Manager](https://github.com/yusuf-kami/dotfiles/blob/master/git/profile.sh) by adding the following line to your `~/.bash_profile`
+
 ```
-  alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
+$ alias gpf="echo 'Running: Git Profile Manager'; $DOTFILES_DIR/git/profile.sh "
 ```
 
 
@@ -132,17 +135,17 @@ Sometimes there will be an *urgent* need to rewrite the history that has already
 This can be done with the following steps that was obtained from this **Stack Overflow [issue](https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit)**:
 1. Checkout the commit to be updated:
 ```
-  git checkout OLD_COMMIT_HASH
+$ git checkout OLD_COMMIT_HASH
 ```
 2. Make the changes to the commit using `git commit --amend`. With this command you can change even the *Author* of the commit with the `--author` parameter. After this command you should get a new commit hash (NEW_COMMIT_HASH) identifying the introduced changes into the branch.
 3. Checkout to the main branch with `git checkout`
 4. Replace the old commit with the amended commit:
 ```
-  git replace OLD_COMMIT_HASH NEW_COMMIT_HASH
+$ git replace OLD_COMMIT_HASH NEW_COMMIT_HASH
 ```
 5. Rewrite the history of all future commits in your trunk:
 ```
-  git filter-branch -- --all
+$ git filter-branch -- --all
 ```
 6. Delete the old commit with `git replace -d OLD_COMMIT_HASH`
 
@@ -152,27 +155,96 @@ This can be done with the following steps that was obtained from this **Stack Ov
 If you would like to rewrite the history of multiple commits, change the `author`, `date` etc., you can do so by using `git rebase` functionality to pick and edit the commits as provided by the **[Git Tools](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)**:
 1. Rebase the commit range that includes those to be edited
 ```
-  git rebase -i HEAD~3
+$ git rebase -i HEAD~3
 ```
 2. The above bring up an interactive editor and you must change the `pick` to `edit` on only the commits to be changed. Once the changes are picked save the edit.
 ```
-  pick f7f3f6d changed my name a bit
+$ pick f7f3f6d changed my name a bit
   edit 310154e updated README formatting and added blame
   pick a5f4a0d added cat-file
 ```
 3. You will get an interactive message telling you what to do to change each picked commit. The first steps is to `amend` each commit. Doing this you can pass a new `author`, `date` etc.
 ```
-  git commit --amend --author="Yusuf Fadairo <yusuf.kami@gmail.com>" --date="2018-11-12 13:14:15"
+$ git commit --amend --author="Yusuf Fadairo <yusuf.kami@gmail.com>" --date="2018-11-12 13:14:15"
 ```
 4. Then continue the `rebase` using the `continue` command
 ```
-  git rebase --continue
+$ git rebase --continue
 ```
 5. This will continue for each and every commit you have picked. Once all rebase is complete you can push the changes to the **origin** using the force push command:
 ```
-  git push --force
+$ git push --force
 ```
 **NOTE** Be careful as this will rewrite the history in the origin which might be pulled by other users.
+
+
+### 3. Local Servers
+To help facilitate working on many projects locally it is preferable to use [`nginx`](http://nginx.org/en/docs/) for port forwarding so there is a more defined URL to local process resolution. This is much better than just having the local domain on your `/etc/hosts` file.
+
+#### 3.1 Setup `nginx`
+To start the server simple use the command `nginx`. If you go to `localhost:8080` you should see the default `nginx` page. The server is created using the configurations file it finds in one of the following locations `/usr/local/nginx/conf`, `/etc/nginx`, or `/usr/local/etc/nginx`.
+#### 3.2 Port Forwarding
+If you would like your apps running as specific ports to be forwarded to the default http/https ports you can configure the app as a site in the configuration file as follows:
+```
+# Create local port forwarding
+server {
+    listen 80;
+    server_name local.example.com;
+
+    location / {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_pass         http://localhost:8080;
+    }
+}
+```
+
+For port forwarding with SSL setup you can add the following to the configuration file:
+```
+# Redirect from HTTP request to HTTPS
+server {
+   listen 80;
+   return 301 https://$host$request_uri;
+}
+
+# Create local port forwarding with HTTPS
+server {
+
+    listen 443;
+    server_name local.example.com;
+
+    location / {
+      proxy_set_header        Host $host;
+      proxy_set_header        X-Real-IP $remote_addr;
+      proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header        X-Forwarded-Proto $scheme;
+
+      proxy_pass              http://localhost:8080;
+      proxy_read_timeout      90;
+
+      proxy_redirect          http://localhost:8080;
+    }
+}
+```
+
+Once this change has been made you can run the command to restart the `nginx` server:
+```
+$ nginx -s reload
+```
+
+Ideally it is best to have a default server setup in your `nginx` configuration so redirection are explicit. This can be done with the following lines:
+```
+# Default server
+server {
+    return 404;
+}
+```
+#### 3.2 Stopping server
+To start the `nginx` server use the command:
+```
+$ nginx -s stop
+```
+
 
 ****
 _Started: Jan 21, 2019_  
