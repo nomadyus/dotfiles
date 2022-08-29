@@ -90,7 +90,6 @@ function setupRabbitMqServer() {
     docker run -d --hostname rabbitmq-hostname --name rabbitmq-server -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 15672:15672 rabbitmq
     echo 'Enabling Rabbit MQ UI services'
     sleep 5
-    docker exec rabbitmqctl set_user_tags guest management
     docker exec rabbitmq-server rabbitmq-plugins enable rabbitmq_federation_management rabbitmq_management rabbitmq_mqtt rabbitmq_stomp
 }
 
