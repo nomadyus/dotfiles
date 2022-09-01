@@ -130,7 +130,9 @@ function installTools() {
   if ! which brew &> /dev/null
     then
       printf "I need 'brew' to install the Tools and you don't have it!\n"
-      exit 1
+      printf "Install brew with the command:\n"
+      printf "\t/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"\n"
+      printf "\n"
   fi
 
   if [ ! -d ~/.nvm ];
