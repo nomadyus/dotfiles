@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+    rabbitmq-server:
+        image: rabbitmq:3.9-management
+        container_name: rabbitmq-server
+        environment:
+            - INIT_DAEMON=docker-compose-rabbitmq
+        ports:
+            - '4369:4369'
+            - '5671:5671'
+            - '5672:5672'
+            - '15672:15672'
+        networks:
+          - rabbitmq-server-net
+
+    redis-server:
+        image: redis
+        container_name: redis-server
+        restart: always
+        environment:
+            - INIT_DAEMON=docker-compose-ops
+            - REDIS_MAX_MEMORY_LIMIT=5gb
+            - REDIS_MAX_MEMORY_POLICY=allkeys-lru
+        ports:
+            - '6379:6379'
+        command: sh -c "redis-server --loglevel warning --maxmemory $${REDIS_MAX_MEMORY_LIMIT} --maxmemory-policy $${REDIS_MAX_MEMORY_POLICY}"
+        networks:
+          - redis-server-net
+
+
+networks:
+  rabbitmq-server-net:
+    driver: bridge
+  redis-server-net:
+    driver: bridge
