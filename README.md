@@ -7,7 +7,7 @@ A collection of scripts and code snippets used to set up and startup the develop
 ```
 
 ## Installation
-In order to use `dotfiles` CLI you must first get the source and from its GitHub [repo](https://github.com/yusuf-kami/dotfiles) with the following commands:
+In order to use `dotfiles` CLI you must first get the source from its GitHub [repo](https://github.com/yusuf-kami/dotfiles) with the following commands:
 ```
  git clone https://github.com/yusuf-kami/dotfiles.git dotfiles
  cd dotfiles
@@ -17,7 +17,7 @@ In order to use `dotfiles` CLI you must first get the source and from its GitHub
 
 
 ## Setup
-Setting up the dotfiles is as easy as `source ./dotfiles.sh` in any linux-based shell environment.
+Setting up the dotfiles is as easy as the command `source ./dotfiles.sh` in any linux-based shell environment.
 
 
 ## Reloading
@@ -47,7 +47,7 @@ The repository includes the following configuration and tools:
 ### 1. Bash
 #### 1.1. Aliases
 This **[`/bash/aliases.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/aliases.sh)** bash script contains all the aliases for the most frequently used commands and sets them for the console.
-**NOTE**: It migth be helpfulful to determine the *code* or *script* attached to an *alias* or a *command*. In order to determine the scripts attached to a command/alias use the  command `type` on the command/alias in question.
+**NOTE**: It might be helpful to determine the *code* or *script* attached to an *alias* or a *command*. In order to determine the scripts attached to a command/alias use the  command `type` on the command/alias in question.
 
 #### 1.2. Profile
 The bash profile script at **[`/bash/profile.sh`](https://github.com/yusuf-kami/dotfiles/blob/master/bash/profile.sh)** is also included to setup the profile and display preference for the terminal.
@@ -61,8 +61,12 @@ These profiles can always be adjusted to your preferences once they are download
 ![Dracula theme in Terminal](https://github.com/yusuf-kami/dotfiles/blob/master/bin/Dracula.png)
 
 #### 1.4 `tmux`
-You can also use `tmux` which is also installed within the bash setup script. This is a very useful and versatile tool for multiplexing and the script used to install it is provided [here](https://gist.github.com/simme/1297707). To start a multiplexed session just use the command `tmux`.
-Once in a `tmux` window in order to run *special commands* you need to input the *prefix* command which is **Ctrl+b**. With this prefix provided new windows or panes can be created and navigated with the following *key binding*:
+You can also use `tmux` which is also installed within the bash setup script. This is a very useful and versatile tool for multiplexing and the script used to install it is provided [here](https://gist.github.com/simme/1297707).
+
+To start a multiplexed session just use the command `tmux`.
+Once in a `tmux` window in order to run *special commands* you need to input the *prefix* command which is **Ctrl+b**.
+
+With this prefix provided new windows or panes can be created and navigated with the following *key binding*:
 - show sessions: `s`
 - create new window: `c`
 - create new pane to left: `%`
@@ -248,4 +252,4 @@ $ nginx -s stop
 
 ****
 _Started: Jan 21, 2019_  
-_Updated: Aug 04, 2020_  
+_Updated: Sep 04, 2022_  
