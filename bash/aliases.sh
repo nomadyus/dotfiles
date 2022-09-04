@@ -248,6 +248,9 @@ alias kil="echo 'Running: kill -9'; kill -9 "
 alias siz="echo 'Printing directory size'; du -sh "
 alias cpd="echo 'Copying directory'; cp -r -f "
 alias mfa="refreshAwsMfa "
+alias eel="echo 'Deactivating Conda environment'; conda deactivate;"
+alias snake2="echo 'Switching to Python 2.7'; conda deactivate; conda activate snake2;"
+alias snake3="echo 'Switching to Python 3.7'; conda deactivate; conda activate snake3;"
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
