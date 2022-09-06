@@ -185,9 +185,10 @@ $ git push --force
 ### 3. Local Servers
 To help facilitate working on many projects locally it is preferable to use [`nginx`](http://nginx.org/en/docs/) for port forwarding so there is a more defined URL to local process resolution. This is much better than just having the local domain on your `/etc/hosts` file.
 
-#### 3.1 Setup `nginx`
+#### 3.1 Using `nginx`
+##### 3.1.1 Setup `nginx`
 To start the server simple use the command `nginx`. If you go to `localhost:8080` you should see the default `nginx` page. The server is created using the configurations file it finds in one of the following locations `/usr/local/nginx/conf`, `/etc/nginx`, or `/usr/local/etc/nginx`.
-#### 3.2 Port Forwarding
+##### 3.1.2 Port Forwarding
 If you would like your apps running as specific ports to be forwarded to the default http/https ports you can configure the app as a site in the configuration file as follows:
 ```
 # Create local port forwarding
@@ -243,12 +244,21 @@ server {
     return 404;
 }
 ```
-#### 3.2 Stopping server
+##### 3.1.3 Stopping server
 To start the `nginx` server use the command:
 ```
 $ nginx -s stop
 ```
 
+### 3.2 Local DevOps
+To start local development there is a `docker-compose` config file at [`lib/docker-compose-ops.yml `](lib/docker-compose-ops.yml ) that contains some useful services needed for reproducing a production environment.
+
+These services include `rabbitmq`, `mongodb` (with `mongo-express`), `redis`, `kibana` and `elasticsearch`.
+
+To start up the services simple use the command:
+```
+$ docker-compose -f lib/docker-compose-ops.yml up
+```
 
 ****
 _Started: Jan 21, 2019_  
