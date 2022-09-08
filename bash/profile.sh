@@ -200,18 +200,6 @@ function installTools() {
       printf "You already have 'travis' installed!\n"
   fi
 
-  # Install 'mysql' with brew for now. Ideally this should be in a docker container!
-  if ! which mysql &> /dev/null
-    then
-      printf "We are installing 'mysql'!\n"
-      brew uninstall mysql-connector-c++
-      brew uninstall mysql-client
-      brew install mysql
-      brew link mysql
-    else
-      printf "You already have 'mysql' installed!\n"
-  fi
-
   # Install 'nginx' for local server resolutions
   if ! which nginx &> /dev/null
     then
