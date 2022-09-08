@@ -1,6 +1,59 @@
 version: '3'
 
 services:
+  mysql-server:
+    image: mysql
+    container_name: mysql-server
+    environment:
+      - MYSQL_ROOT_PASSWORD=changeme
+      - MYSQL_DATABASE=mydb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ~/Development/mount/mysql:/var/lib/mysql
+    networks:
+      - sql-server-net
+
+  mssql-server:
+    image: mcr.microsoft.com/mssql/server
+    container_name: mssql-server
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=changeme
+    ports:
+      - "1433:1433"
+    volumes:
+      - ~/Development/mount/mssql:/var/opt/mssql/data
+    networks:
+      - sql-server-net
+
+  postgresql-server:
+    image: postgres
+    container_name: postgresql-server
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=changeme
+      - POSTGRES_DB=mydb
+    ports:
+      - "5432:5432"
+    volumes:
+      - ~/Development/mount/postgresql:/var/lib/postgresql/data
+    networks:
+      - sql-server-net
+
+  # Use as UI for MySql, MS SQL and PostgreSQL (use container names for 'server')
+  sql-ui:
+    image: adminer
+    container_name: sql-ui
+    ports:
+      - 8080:8080
+    networks:
+      - sql-server-net
+    depends_on:
+      - mysql-server
+      - mssql-server
+      - postgresql-server
+
   rabbitmq-server:
     image: rabbitmq:3.9-management
     container_name: rabbitmq-server
@@ -27,6 +80,18 @@ services:
     command: sh -c "redis-server --loglevel warning --maxmemory $${REDIS_MAX_MEMORY_LIMIT} --maxmemory-policy $${REDIS_MAX_MEMORY_POLICY}"
     networks:
       - redis-server-net
+
+  dynamodb-server:
+    image: amazon/dynamodb-local
+    container_name: dynamodb-server
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+    volumes:
+      - ~/Development/mount/oracle:/
+    networks:
+      - dynamodb-server-net
 
   mongodb-server:
     image: mongo
@@ -83,6 +148,10 @@ services:
       - elasticsearch-server
 
 networks:
+  sql-server-net:
+    driver: bridge
+  dynamodb-server-net:
+    driver: bridge
   rabbitmq-server-net:
     driver: bridge
   redis-server-net:
