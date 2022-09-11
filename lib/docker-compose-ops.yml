@@ -77,6 +77,8 @@ services:
       - REDIS_MAX_MEMORY_POLICY=allkeys-lru
     ports:
       - 6379:6379
+    volumes:
+      - ~/Development/mount/redis:/data
     command: sh -c "redis-server --loglevel warning --maxmemory $${REDIS_MAX_MEMORY_LIMIT} --maxmemory-policy $${REDIS_MAX_MEMORY_POLICY}"
     networks:
       - redis-server-net
@@ -87,9 +89,10 @@ services:
     environment:
       - ACCEPT_EULA=Y
     ports:
-      - "1433:1433"
+      - "8000:8000"
     volumes:
-      - ~/Development/mount/oracle:/
+      - ~/Development/mount/dynamodb:/home/dynamodblocal/data
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal/data/
     networks:
       - dynamodb-server-net
 
