@@ -207,6 +207,7 @@ alias gcn="echo 'Running: git clone'; git clone "
 alias gcd="echo 'To commit using past dates use the command: git commit --date=\"YYYY-MM-DD HH:MM:SS\"'"
 alias grv="echo 'Running: git revert'; git revert "
 alias gmg="echo 'Running: git merge'; git merge "
+alias gms="echo 'Running: git merge --squas'; git merge --squash "
 alias gcp="echo 'Running: git cherry-pick'; git cherry-pick "
 
 ## Development
@@ -240,6 +241,7 @@ alias mfa="refreshAwsMfa "
 alias eel="echo 'Deactivating Conda environment'; conda deactivate;"
 alias snake2="echo 'Switching to Python 2.7'; conda deactivate; conda activate snake2;"
 alias snake3="echo 'Switching to Python 3.7'; conda deactivate; conda activate snake3;"
+alias snake3.5="echo 'Switching to Python 3.5'; conda deactivate; conda activate snake3.5;"
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
