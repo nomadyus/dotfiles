@@ -104,16 +104,6 @@ elif [ 'gl' = "${PROFILE}" ]; then
   git config user.signingkey 92A1AFEB8FF68EFA
   git config commit.gpgsign true
 
-elif [ 'light' = "${PROFILE}" ]; then
-  printf "Using the 'Yusuf Fadairo' profile for an Enlighten project.\n"
-  git config user.name "Yusuf Fadairo (Enlighten)"
-  git config user.email "contact@enlighten.ai"
-
-elif [ 'hive' = "${PROFILE}" ]; then
-  printf "Using the 'Yusuf Fadairo' profile for an Hive.co.\n"
-  git config user.name "Yusuf Fadairo"
-  git config user.email "yusuf@hive.co"
-
 else
   printf "Profile name provided is not recognised.\n"
   exit 1
