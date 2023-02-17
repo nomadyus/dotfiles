@@ -144,6 +144,15 @@ function installTools() {
     printf "You already have 'nvm' installed!\n"
   fi
 
+  if [ ! -d ~/.sdkman ];
+    then
+      printf "The CLI for 'sdkman' is not installed.\n"
+      printf "We are installing 'sdkman'!\n"
+      curl -s "https://get.sdkman.io" | bash
+  else
+    printf "You already have 'sdkman' ('sdk') installed!\n"
+  fi
+
   if ! which vault &> /dev/null
     then
       printf "The CLI for 'vault' is not installed.\n"
@@ -161,7 +170,7 @@ function installTools() {
       printf "We are installing 'tfenv' for managing 'terraform' versions!\n"
       brew install tfenv
   else
-    printf "You already have 'vault' installed!\n"
+    printf "You already have 'tfenv' installed!\n"
   fi
 
   if ! which clj &> /dev/null
@@ -207,6 +216,15 @@ function installTools() {
       brew install nginx
     else
       printf "You already have 'nginx' installed!\n"
+  fi
+
+  # Install 'Another Redis Desktop Manager' for docker redis instances
+  if [ ! -d /Applications/Another\ Redis\ Desktop\ Manager.app ];
+    then
+      printf "We are installing 'another-redis-desktop-manager'!\n"
+      brew install --cask another-redis-desktop-manager
+    else
+      printf "You already have 'another-redis-desktop-manager' ('/Applications/Another\ Redis\ Desktop\ Manager.app') installed!\n"
   fi
 }
 

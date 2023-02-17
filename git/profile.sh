@@ -77,20 +77,26 @@ if [ 'telus-digital' = "${PROFILE}" ]; then
   printf "Using the 'Telus Digital' Git profile.\n"
   git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.fadairo@telus.com"
-  REMOTE_ORIGIN=${REMOTE_ORIGIN/@github./@telus.github.}
-  printf "\nRemote Origin ${REMOTE_ORIGIN}\n"
 
 elif [ 'telus' = "${PROFILE}" ]; then
   printf "Using the 'Telus' Git profile.\n"
   git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.fadairo@telus.com"
-  REMOTE_ORIGIN=${REMOTE_ORIGIN/@telus.github./@github.}
 
 elif [ 'kami' = "${PROFILE}" ]; then
   printf "Using the 'Yusuf Fadairo' Git profile.\n"
   git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.kami@gmail.com"
-  REMOTE_ORIGIN=${REMOTE_ORIGIN/@telus.github./@github.}
+
+elif [ 'xm' = "${PROFILE}" ]; then
+  printf "Using the 'Sirius XM' Git profile.\n"
+  git config user.name "Yusuf Fadairo"
+  git config user.email "yusuf.fadairo@siriusxm.com"
+
+elif [ 'ee' = "${PROFILE}" ]; then
+  printf "Using the 'Equal Experts' Git profile.\n"
+  git config user.name "Yusuf Fadairo"
+  git config user.email "yusuf.fadairo@equalexperts.com"
 
 elif [ 'bb' = "${PROFILE}" ]; then
   printf "Using the 'Yusuf Fadairo' Bitbucket profile.\n"
