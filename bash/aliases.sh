@@ -242,7 +242,7 @@ alias eel="echo 'Deactivating Conda environment'; conda deactivate;"
 alias snake2="echo 'Switching to Python 2.7'; conda deactivate; conda activate snake2;"
 alias snake3="echo 'Switching to Python 3.7'; conda deactivate; conda activate snake3;"
 alias snake3.5="echo 'Switching to Python 3.5'; conda deactivate; conda activate snake3.5;"
-alias jdk="echho 'Sourcing SDK Man'; source '~/.sdkman/bin/sdkman-init.sh'"
+alias jdk="echo 'Sourcing SDK Man'; source ~/.sdkman/bin/sdkman-init.sh"
 
 ## Docker
 alias dim="echo 'Running: docker images'; docker images"
