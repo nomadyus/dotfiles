@@ -73,11 +73,6 @@ printf "Preparing to manage you Git profiles.\n"
 
 REMOTE_ORIGIN=$(git config remote.origin.url)
 
-if [ 'telus-digital' = "${PROFILE}" ]; then
-  printf "Using the 'Telus Digital' Git profile.\n"
-  git config user.name "Yusuf Fadairo"
-  git config user.email "yusuf.fadairo@telus.com"
-
 elif [ 'telus' = "${PROFILE}" ]; then
   printf "Using the 'Telus' Git profile.\n"
   git config user.name "Yusuf Fadairo"
@@ -102,13 +97,6 @@ elif [ 'bb' = "${PROFILE}" ]; then
   printf "Using the 'Yusuf Fadairo' Bitbucket profile.\n"
   git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.kami@gmail.com"
-
-elif [ 'gl' = "${PROFILE}" ]; then
-  printf "Using the 'Yusuf Fadairo' GitLab profile.\n"
-  git config user.name "Yusuf Fadairo"
-  git config user.email "yusuf.kami@gmail.com"
-  git config user.signingkey 92A1AFEB8FF68EFA
-  git config commit.gpgsign true
 
 else
   printf "Profile name provided is not recognised.\n"
