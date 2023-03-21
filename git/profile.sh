@@ -99,7 +99,7 @@ elif [ 'bb' = "${PROFILE}" ]; then
   git config user.email "yusuf.kami@gmail.com"
 
 else
-  printf "Profile name provided is not recognised.\n"
+  printf "Profile name '${PROFILE}' is not recognised!\n"
   exit 1
 fi
 
