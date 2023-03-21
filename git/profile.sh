@@ -73,7 +73,7 @@ printf "Preparing to manage you Git profiles.\n"
 
 REMOTE_ORIGIN=$(git config remote.origin.url)
 
-elif [ 'telus' = "${PROFILE}" ]; then
+if [ 'telus' = "${PROFILE}" ]; then
   printf "Using the 'Telus' Git profile.\n"
   git config user.name "Yusuf Fadairo"
   git config user.email "yusuf.fadairo@telus.com"
