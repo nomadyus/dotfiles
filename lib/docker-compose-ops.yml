@@ -172,7 +172,7 @@ services:
     networks:
       - neo4j-server-net
 
-  zookeeper:
+  zookeeper-server:
     image: wurstmeister/zookeeper
     container_name: zookeeper
     ports:
@@ -180,7 +180,7 @@ services:
     networks:
       - kafka-net
 
-  kafka:
+  kafka-server:
     image: wurstmeister/kafka
     container_name: kafka
     ports:
@@ -195,7 +195,7 @@ services:
     networks:
       - kafka-net
     depends_on:
-      - zookeeper
+      - zookeeper-server
 
 networks:
   sql-server-net:
