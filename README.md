@@ -253,7 +253,7 @@ $ nginx -s stop
 ### 3.2 Local DevOps
 To start local development there is a `docker-compose` config file at [`lib/docker-compose-ops.yml `](lib/docker-compose-ops.yml ) that contains some useful services needed for reproducing a production environment.
 
-These services include `rabbitmq`, `mongodb` (with `mongo-express`), `redis`, `kibana` and `elasticsearch`. 
+These services include `rabbitmq`, `mongodb` (with `mongo-express`), `redis`, `kibana` and `elasticsearch` as well as `zookeeper` and `kafka`. 
 
 To start up the services simple use the command:
 ```
