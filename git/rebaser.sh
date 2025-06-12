@@ -1,6 +1,6 @@
 #!/bin/sh
 ## Git Rebaser
-# This goes through all directories recursively startin from the current one and performs a 'git pull --rebase' command on all Git directoies.
+# This goes through all directories recursively starting from the current one and performs a 'git pull --rebase' command on all Git directories.
 
 BASE_DIR=$(dirname $_)
 
@@ -12,7 +12,7 @@ programName=$0
 
 function usage {
   echo "Git Rebaser"
-  echo "description: This goes through all directories recursively and performs a 'git pull --rebase' command on all Git directoies."
+  echo "description: This goes through all directories recursively and performs a 'git pull --rebase' command on all Git directories."
   echo "usage: $programName"
   exit 1
 }
